@@ -16,9 +16,7 @@ const Header = () => {
               </h6>
                  <span className="absolute right-[-10px] top-1/2 h-[32px] w-[1px] bg-white/50 transform -translate-y-1/2"></span>
             </div>
-            {/* <Image src={'../../../../../public/images/file.svg'} alt="phone number" width={28} height={28} /> */}
-            <span>phone</span>
-            {/* <Phone /> */}
+            <Image src={'/images/file.svg'} alt="phone number" width={28} height={28} />
           </div>
           <div>
             <Image
