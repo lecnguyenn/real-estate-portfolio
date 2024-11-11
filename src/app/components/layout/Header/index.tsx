@@ -14,7 +14,7 @@ const Header = () => {
               <h6 className="text-base leading-[20px] text-[#ffff] hover:text-[#efb93f] transition duration-500">
                 <a href="">+990-737 621 432</a>
               </h6>
-                 <span className="absolute right-[-10px] top-1/2 h-[32px] w-[1px] bg-white/50 transform -translate-y-1/2"></span>
+              <span className="absolute right-[-10px] top-1/2 h-[32px] w-[1px] bg-white/50 transform -translate-y-1/2"></span>
             </div>
             <Image src={'/images/file.svg'} alt="phone number" width={28} height={28} />
           </div>
@@ -38,22 +38,22 @@ const Header = () => {
           </li>
           <li>
             <Link href="/" className="py-[15px] px-5 font-semibold">
-              Contact us
+              Service
             </Link>
           </li>
           <li>
             <Link href="/" className="py-[15px] px-5 font-semibold">
-              Property
+              Protfolio
             </Link>
           </li>
           <li>
             <Link href="/" className="py-[15px] px-5 font-semibold">
-              For rent
+              Resource
             </Link>
           </li>
           <li>
             <Link href="/" className="py-[15px] px-5 font-semibold">
-              For Sale
+              Contact
             </Link>
           </li>
         </ul>
