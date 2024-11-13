@@ -32,7 +32,7 @@ const Intro = () => {
 						delay: 2000,
 						disableOnInteraction: false
 					}}
-					loop={false}
+					loop={true}
 					modules={[EffectFade, Navigation, Pagination, Autoplay]}
 				>
 					{imageBannerSource.map((item, key) => (
