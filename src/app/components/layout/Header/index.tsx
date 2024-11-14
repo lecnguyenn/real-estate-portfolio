@@ -53,7 +53,7 @@ const Header = () => {
           </li>
           <li>
             <Link href="/" className="py-[15px] px-5 font-semibold">
-              Contact
+              Contact Us
             </Link>
           </li>
         </ul>

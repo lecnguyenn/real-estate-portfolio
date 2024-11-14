@@ -38,7 +38,7 @@ const Intro = () => {
 					{imageBannerSource.map((item, key) => (
 						<SwiperSlide key={key}>
 							<div
-								className=" pt-[300px] pb-[235px] pr-[3%] bg-cover bg-no-repeat"
+								className=" pt-[300px] pb-[235px] pr-[3%] bg-cover bg-no-repeat object-cover"
 								style={{
 									backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.15) 100%), url(${item})`,
 								}}
