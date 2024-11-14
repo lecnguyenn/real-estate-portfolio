@@ -20,14 +20,14 @@ const AboutUs = () => {
                 we strive to create a space where people can connect,
                 share knowledge, and explore the exciting world of automobiles.
               </p>
-              <div className="mb-[40px]">
-                <Image src={'https://neckle-rtl-nextjs.vercel.app/assets/img/home2/home2-about-img2.png'} width={457} height={525} alt="" />
+              <div className="mb-[40px] pt-[25px]">
+                <Image src={'https://neckle-rtl-nextjs.vercel.app/assets/img/home2/home2-about-img2.png'} width={457} height={525} alt="" className="rounded-[10px]" />
               </div>
             </div>
           </div>
-          <div className="w-[33.3%] flex-0 flex-0 flex-auto">
+          <div className="w-[67.7%] flex-0 flex-0 flex-auto">
             <div className="mb-[40px]">
-              <Image src={'https://neckle-rtl-nextjs.vercel.app/assets/img/home2/home2-about-img1.png'} width={356} height={450} alt="" />
+              <Image src={'https://neckle-rtl-nextjs.vercel.app/assets/img/home2/home2-about-img1.png'} width={356} height={450} alt="" className="rounded-[10px]" />
             </div>
           </div>
         </div>
