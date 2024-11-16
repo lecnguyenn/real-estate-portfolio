@@ -1,4 +1,5 @@
 "use client"
+import { debounce } from 'lodash';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
@@ -12,41 +13,75 @@ const ImageComparisonSlider = ({ bgImageSource, aboveImageSource }: ImageCompari
   const [position, setPosition] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const handleMouseDown = () => {
+  const handleStart = () => {
     setIsResizing(true);
   };
 
-  const handleMouseUp = () => {
+  const handleEnd = () => {
     setIsResizing(false);
   };
 
-  const handleMouseMove = (e: MouseEvent) => {
+  const debouncedSetPosition = debounce((newPosition: number) => {
+    setPosition(newPosition);
+  }, 5);
+
+  const updatePosition = (clientX: number) => {
     if (isResizing && containerRef.current) {
       const rect = containerRef.current.getBoundingClientRect();
-      const x = e.clientX - rect.left;
+      const x = clientX - rect.left;
       const containerWidth = containerRef.current.offsetWidth;
 
       const newPosition = Math.min(Math.max((x / containerWidth) * 100, 0), 100);
-      setPosition(newPosition);
+      debouncedSetPosition(newPosition);
     }
   };
 
+  // Mouse events
+  const handleMouseMove = (e: MouseEvent) => {
+    e.preventDefault();
+    updatePosition(e.clientX);
+  };
+
+  // Touch events
+  const handleTouchMove = (e: TouchEvent) => {
+    e.preventDefault();
+    const touch = e.touches[0];
+    updatePosition(touch.clientX);
+  };
+
   useEffect(() => {
-    window.addEventListener('mouseup', handleMouseUp);
-    window.addEventListener('mousemove', handleMouseMove);
+    if (isResizing) {
+      // Mouse events
+      window.addEventListener('mousemove', handleMouseMove);
+      window.addEventListener('mouseup', handleEnd);
+
+      // Touch events
+      window.addEventListener('touchmove', handleTouchMove, { passive: false });
+      window.addEventListener('touchend', handleEnd);
+      window.addEventListener('touchcancel', handleEnd);
+    }
 
     return () => {
-      window.removeEventListener('mouseup', handleMouseUp);
+      // Cleanup mouse events
       window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseup', handleEnd);
+
+      // Cleanup touch events
+      window.removeEventListener('touchmove', handleTouchMove);
+      window.removeEventListener('touchend', handleEnd);
+      window.removeEventListener('touchcancel', handleEnd);
+
+      debouncedSetPosition.cancel();
     };
-  }, [isResizing]);
+  }, [debouncedSetPosition, handleMouseMove, handleTouchMove, isResizing]);
 
   return (
     <div className="w-full max-w-2xl mx-auto">
       <div
         ref={containerRef}
-        className="relative w-full h-96 overflow-hidden cursor-col-resize"
-        onMouseDown={handleMouseDown}
+        className="relative w-full h-96 overflow-hidden touch-none"
+        onMouseDown={handleStart}
+        onTouchStart={handleStart}
       >
         {/* Bottom Image (After) */}
         <div className="absolute inset-0">
@@ -82,6 +117,7 @@ const ImageComparisonSlider = ({ bgImageSource, aboveImageSource }: ImageCompari
           />
         </div>
 
+        {/* Slider Handle */}
         <div
           className="absolute top-0 bottom-0 z-40"
           style={{ left: `${position}%`, transform: 'translateX(-50%)' }}
