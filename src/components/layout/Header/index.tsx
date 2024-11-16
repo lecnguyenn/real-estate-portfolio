@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react';
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
 
   const [isSticky, setIsSticky] = useState(false);
   const headerRef = useRef<HTMLInputElement>(null);
