@@ -85,7 +85,7 @@ const Header = () => {
 
         {/* Navigation Links */}
         <ul className={`
-          flex flex-col md:flex-row items-center list-none m-0 p-0 my-0 mx-auto 
+          flex flex-col md:flex-row items-center justify-center list-none m-0 p-0 my-0 mx-auto 
           uppercase text-white text-[13px]
           ${isMenuOpen ? 'block' : 'hidden md:flex'}
         `}>
