@@ -1,19 +1,14 @@
 import './globals.css'
 
 import type { Metadata } from 'next'
-import { Inter, Montserrat } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 
-// Define your fonts
-const inter = Inter({
+const montserrat = Montserrat({
   subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-})
-
-const montserratMono = Montserrat({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-montserrat-mono',
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-montserrat',
+  fallback: ['sans-serif'],
+  adjustFontFallback: false
 })
 
 
@@ -30,7 +25,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${montserratMono.variable} antialiased`}>{children}</body>
+      <body className={`${montserrat.variable} antialiased`}>{children}</body>
     </html>
   )
 }
