@@ -36,7 +36,7 @@ const AboutUs = () => {
               <Image src={'https://neckle-rtl-nextjs.vercel.app/assets/img/home2/home2-about-img1.png'} width={356} height={450} alt="" className="rounded-[10px] object-cover" />
             </div>
 
-            <div className="relative flex items-center justify-between gap-[25px] min-w-[630px] py-[20px] px-0">
+            <div className="relative flex items-center xl:justify-between gap-[25px] xl:min-w-[630px] sm:w-full sm:justify-around sm:flex-wrap-reverse py-[20px] px-0">
               <div className="flex items-center gap-[16px]">
                 <div>
                   <div className="flex items-center text-[#16191e] text-[20px] font-bold">

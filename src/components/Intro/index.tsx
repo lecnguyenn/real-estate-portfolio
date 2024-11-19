@@ -46,7 +46,7 @@ const Intro = () => {
 								<div className="relative flex flex-wrap flex-row-reverse pr-[5%]">
 									<div>
 										<div className="max-w-[625px] w-full text-white text-right">
-											<h2 className="font-bold not-italic leading-tight text-[75px] p-[-250px] select-none mb-[15px]">
+											<h2 className="font-bold not-italic leading-tight text-[50px] sm:text-[60px] xl:text-[75px]">
 												NewDay Valley Real Estate
 											</h2>
 											<p className='font-normal text-lg leading-normal mb-10'>.To help newday company stand out and make an impression on potential.</p>

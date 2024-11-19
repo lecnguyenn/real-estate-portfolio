@@ -1,7 +1,6 @@
 "use client"
-import { debounce } from 'lodash';
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 type ImageComparisonSliderPropsType = {
   bgImageSource: string;
@@ -21,59 +20,53 @@ const ImageComparisonSlider = ({ bgImageSource, aboveImageSource }: ImageCompari
     setIsResizing(false);
   };
 
-  const debouncedSetPosition = debounce((newPosition: number) => {
-    setPosition(newPosition);
-  }, 5);
 
-  const updatePosition = (clientX: number) => {
+  const updatePosition = useCallback((clientX: number) => {
     if (isResizing && containerRef.current) {
       const rect = containerRef.current.getBoundingClientRect();
       const x = clientX - rect.left;
       const containerWidth = containerRef.current.offsetWidth;
 
       const newPosition = Math.min(Math.max((x / containerWidth) * 100, 0), 100);
-      debouncedSetPosition(newPosition);
+      setPosition(newPosition);
     }
-  };
+  },[isResizing]);
 
   // Mouse events
-  const handleMouseMove = (e: MouseEvent) => {
+  const handleMouseMove = useCallback((e: MouseEvent) => {
     e.preventDefault();
     updatePosition(e.clientX);
-  };
+  },[updatePosition]);
 
   // Touch events
-  const handleTouchMove = (e: TouchEvent) => {
+  const handleTouchMove = useCallback((e: TouchEvent) => {
     e.preventDefault();
     const touch = e.touches[0];
     updatePosition(touch.clientX);
-  };
+  },[updatePosition]);
 
   useEffect(() => {
     if (isResizing) {
-      // Mouse events
+
       window.addEventListener('mousemove', handleMouseMove);
       window.addEventListener('mouseup', handleEnd);
 
-      // Touch events
+
       window.addEventListener('touchmove', handleTouchMove, { passive: false });
       window.addEventListener('touchend', handleEnd);
       window.addEventListener('touchcancel', handleEnd);
     }
 
     return () => {
-      // Cleanup mouse events
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('mouseup', handleEnd);
 
-      // Cleanup touch events
       window.removeEventListener('touchmove', handleTouchMove);
       window.removeEventListener('touchend', handleEnd);
       window.removeEventListener('touchcancel', handleEnd);
 
-      debouncedSetPosition.cancel();
     };
-  }, [debouncedSetPosition, handleMouseMove, handleTouchMove, isResizing]);
+  }, [handleMouseMove, handleTouchMove, isResizing]);
 
   return (
     <div className="w-full max-w-2xl mx-auto">

@@ -32,7 +32,7 @@ const config: Config = {
       },
       animation: {
         scroll: 'marquee 35s linear 0s infinite',
-      }
+      },
     },
   },
   plugins: [],
