@@ -10,12 +10,12 @@ const AboutUs = () => {
 
           {/* Left Text Section */}
           <div className="md:w-7/12 text-left order-2 md:order-1">
-            <div className="pl-[35px]">
+            <div className="text-left">
               <div>
                 <span className="font-semibold text-[16px] mb-[5px] text-[#efb93f] tracking-[.2em]">(Since-2020)</span>
                 <h2 className="font-bold text-[40px] mb-0 text-[#16191e]">Get To Know About NewDay</h2>
               </div>
-              <h6 className="text-[17px] font-semibold leading-[30px] pt-5 mb-[5px] text-[#16191e]">Welcome to our Neckle!</h6>
+              <h6 className="text-[17px] font-semibold leading-[30px] pt-5 mb-[5px] text-[#16191e]">Welcome to our NewDay!</h6>
               <p className="text-[#5e5e5e] leading-[30px]">
                 We&apos;re thrilled to have you join our community of automotive
                 enthusiasts and professionals. Whether you&apos;re a
@@ -36,7 +36,7 @@ const AboutUs = () => {
               <Image src={'https://neckle-rtl-nextjs.vercel.app/assets/img/home2/home2-about-img1.png'} width={356} height={450} alt="" className="rounded-[10px] object-cover" />
             </div>
 
-            <div className="relative flex items-center xl:justify-between gap-[25px] xl:min-w-[630px] sm:w-full sm:justify-around sm:flex-wrap-reverse py-[20px] px-0">
+            <div className="relative flex items-center xl:justify-between gap-[25px] xl:min-w-[630px] sm:w-full justify-around flex-wrap-reverse py-[20px] px-0">
               <div className="flex items-center gap-[16px]">
                 <div>
                   <div className="flex items-center text-[#16191e] text-[20px] font-bold">

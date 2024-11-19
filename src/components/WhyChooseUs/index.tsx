@@ -28,7 +28,7 @@ const WhyChooseUs = () => {
             </div>
           </div>
           <div className="flex flex-col">
-            <div className="flex gap-8">
+            <div className="flex gap-8 pb-[50px]">
               <div className="text-right">
                 <h5 className="text-xl font-bold mb-2.5">
                   <span className="text-[#efb93f]">Affordable&nbsp;</span>
@@ -41,6 +41,37 @@ const WhyChooseUs = () => {
               </div>
               <div className="h-[70px] max-w-[70px] min-w-[70px] flex items-center justify-center border rounded border-[#efb93f]">
                 <Image src={'/icons/affordable.svg'} width={50} height={50} alt="" />
+              </div>
+            </div>
+
+            <div className="flex gap-8 pb-[50px]">
+              <div className="text-right">
+                <h5 className="text-xl font-bold mb-2.5">
+                  Money Back<span className="text-[#efb93f]">&nbsp;Guarantee</span>
+                </h5>
+                <p className="font-normal leading-6 text-[#5e5e5e]">An affordable price for a luxury car may be
+                  significantly higher than an affordable price for a
+                  budget car...
+                </p>
+              </div>
+              <div className="h-[70px] max-w-[70px] min-w-[70px] flex items-center justify-center border rounded border-[#efb93f]">
+                <Image src={'/icons/guarantee.svg'} width={50} height={50} alt="" />
+              </div>
+            </div>
+
+            <div className="flex gap-8">
+              <div className="text-right">
+                <h5 className="text-xl font-bold mb-2.5">
+                  <span className="text-[#efb93f]">Outstanding&nbsp;</span>
+                  Property
+                </h5>
+                <p className="font-normal leading-6 text-[#5e5e5e]">An affordable price for a luxury car may be
+                  significantly higher than an affordable price for a
+                  budget car...
+                </p>
+              </div>
+              <div className="h-[70px] max-w-[70px] min-w-[70px] flex items-center justify-center border rounded border-[#efb93f]">
+                <Image src={'/icons/outstanding.svg'} width={50} height={50} alt="" />
               </div>
             </div>
           </div>
