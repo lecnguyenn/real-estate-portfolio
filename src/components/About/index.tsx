@@ -4,7 +4,7 @@ import AnimatedNumberCounter from "../AnimateNumber";
 
 const AboutUs = () => {
   return (
-    <div className="container mx-auto pt-[110px] mb-[110px]">
+    <div className="container mx-auto mb-[80px] pt-[110px] lg:mb-[110px]">
       <div className="w-full mx-auto px-3">
         <div className="flex flex-col md:flex-row gap-6">
 
@@ -13,7 +13,7 @@ const AboutUs = () => {
             <div className="text-left">
               <div>
                 <span className="font-semibold text-[16px] mb-[5px] text-[#efb93f] tracking-[.2em]">(Since-2020)</span>
-                <h2 className="font-bold text-[40px] mb-0 text-[#16191e]">Get To Know About NewDay</h2>
+                <h2 className="font-bold text-[30px] lg:text-[40px] mb-0 text-[#16191e]">Get To Know About NewDay</h2>
               </div>
               <h6 className="text-[17px] font-semibold leading-[30px] pt-5 mb-[5px] text-[#16191e]">Welcome to our NewDay!</h6>
               <p className="text-[#5e5e5e] leading-[30px]">
@@ -41,7 +41,7 @@ const AboutUs = () => {
                 <div>
                   <div className="flex items-center text-[#16191e] text-[20px] font-bold">
                     <span>K+</span>
-                    <AnimatedNumberCounter value={25} duration={1000} />
+                    <AnimatedNumberCounter value={25} duration={2000} />
                   </div>
                   <p className="text-[#5e5e5e] text-sm font-semibold">Experience</p>
                 </div>
@@ -55,7 +55,7 @@ const AboutUs = () => {
                     <span>K+</span>
                     <AnimatedNumberCounter value={200} duration={2000} />
                   </div>
-                  <p className="text-[#5e5e5e] text-sm font-semibold">Project Sold</p>
+                  <p className="text-[#5e5e5e] text-sm font-semibold">Customer</p>
                 </div>
                 <div>
                   <Image src={'/icons/home1.svg'} width={40} height={40} alt="" />
@@ -65,7 +65,7 @@ const AboutUs = () => {
                 <div>
                   <div className="flex items-center text-[#16191e] text-[20px] font-bold">
                     <span>K+</span>
-                    <AnimatedNumberCounter value={600} duration={3000} />
+                    <AnimatedNumberCounter value={600} duration={2000} />
                   </div>
                   <p className="text-[#5e5e5e] text-sm font-semibold">Project Completed</p>
                 </div>

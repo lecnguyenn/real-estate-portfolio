@@ -2,7 +2,7 @@ import ImageComparisonSlider from "../ImageComparisonSlider";
 
 const FeatureSerive = () => {
   return (
-    <div className="bg-cover bg-no-repeat object-cover my-28 py-28"
+    <div className="bg-cover bg-no-repeat bg-[50%] object-cover my-28 py-[80px] lg:py-[110px]"
       style={{
         backgroundImage: 'url(/images/dream-car-bg.png)'
       }}
@@ -10,7 +10,7 @@ const FeatureSerive = () => {
       <div className="container mx-auto">
         <div className="mb-[50px]">
           <div className="text-center">
-            <h2 className="text-[40px] font-bold mb-[5px] leading-[1.3]">Feature Service</h2>
+            <h2 className="text-[30px] lg:text-[40px] font-bold mb-[5px] leading-[1.3]">Feature Service</h2>
             <p>Here are some of the featured Apartment in different categories</p>
           </div>
         </div>

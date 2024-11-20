@@ -3,6 +3,9 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 
+import Footer from '@/components/layout/Footer'
+import Header from '@/components/layout/Header'
+
 const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
@@ -25,7 +28,13 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} antialiased`}>{children}</body>
+      <body className={`${montserrat.variable} antialiased`}>
+        <div className='flex-grow'>
+          <Header />
+          {children}
+        </div>
+        <Footer />
+      </body>
     </html>
   )
 }
