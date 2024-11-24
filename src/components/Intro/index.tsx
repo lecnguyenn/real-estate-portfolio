@@ -29,7 +29,7 @@ const Intro = () => {
 					}}
 					className='flex'
 					autoplay={{
-						delay: 2000,
+						delay: 2500,
 						disableOnInteraction: false
 					}}
 					loop={true}

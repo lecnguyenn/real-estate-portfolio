@@ -29,7 +29,7 @@ const companyList = [{
 
 const TrustBy = () => {
   return (
-    <div className="bg-cover bg-no-repeat bg-[50%] object-cover my-28 py-[80px] lg:py-[110px]"
+    <div className="bg-cover bg-no-repeat bg-[50%] object-cover mt-28 py-[80px] lg:py-[110px]"
       style={{
         backgroundImage: 'url(/images/dream-car-bg.png)'
       }}
@@ -43,6 +43,7 @@ const TrustBy = () => {
         </div>
         <div className="mt-[30px]">
           <ImageSlider imageList={companyList} />
+
         </div>
       </div>
 
