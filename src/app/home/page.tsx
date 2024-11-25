@@ -13,7 +13,7 @@ import WhyChooseUs from '@/components/WhyChooseUs'
 export default function Home() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Intro />
       <TextSlider />
       <AboutUs />

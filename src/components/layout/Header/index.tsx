@@ -2,10 +2,12 @@
 import { Menu } from 'lucide-react';
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 
 const Header = () => {
-
+  const pathName = usePathname();
+  const isCurrentHomePage = pathName === '/';
   const [isSticky, setIsSticky] = useState(false);
   const headerRef = useRef<HTMLInputElement>(null);
   const topSectionRef = useRef<HTMLInputElement>(null);
@@ -29,7 +31,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div ref={topSectionRef} className="absolute w-full z-[777] top-0 left-0">
+    <div ref={topSectionRef} className={`${isCurrentHomePage ? 'absolute' : 'relative bg-black'} w-full z-[777] top-0 left-0`}>
       {/* Top Section */}
       <div className="border-b border-[hsla(0,0%,100%,.15)]">
         <div className="hidden md:flex flex-col md:flex-row items-center justify-between py-3.5 px-4 lg:px-44">
@@ -72,7 +74,7 @@ const Header = () => {
           transition-all duration-300`}
       >
         <div className="md:hidden flex justify-between mb-4">
-                    <div className="w-48 md:w-auto">
+          <div className="w-48 md:w-auto">
             <Image
               src="/icons/logo.svg"
               alt="logo"
@@ -98,12 +100,12 @@ const Header = () => {
           <li className="w-full md:w-auto text-center">
             <Link
               href="/"
-              className="block py-3 md:py-[15px] px-5 font-semibold hover:text-[#efb93f] transition duration-300"
+              className={`block ${isCurrentHomePage ? 'text-[#efb93f]' : 'text-white'} py-3 md:py-[15px] px-5 font-semibold hover:text-[#efb93f] transition duration-300`}
             >
               Home
             </Link>
           </li>
-          <li className="w-full md:w-auto text-center">
+          <li className={`w-full md:w-auto text-center ${pathName === '/service' ? 'text-[#efb93f]' : 'text-white'}`}>
             <Link
               href="/"
               className="block py-3 md:py-[15px] px-5 font-semibold hover:text-[#efb93f] transition duration-300"
@@ -127,7 +129,7 @@ const Header = () => {
               Resource
             </Link>
           </li>
-          <li className="w-full md:w-auto text-center">
+          <li className={`w-full md:w-auto text-center ${pathName === '/contact' ? 'text-[#efb93f]' : 'text-white'}`}>
             <Link
               href="/contact"
               className="block py-3 md:py-[15px] px-5 font-semibold hover:text-[#efb93f] transition duration-300"
