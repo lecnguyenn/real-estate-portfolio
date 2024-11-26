@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="items-center">
             <span className="text-[14px] text-white font-semibold">To More Inquiry</span>
             <h6 className="text-[20px] font-semibold text-[#efb93f]">
-              <a href="tel:+0392854780">039 285 4780</a>
+              <a href="tel:+84346825006">+84 346 825 006</a>
             </h6>
           </div>
         </div>
