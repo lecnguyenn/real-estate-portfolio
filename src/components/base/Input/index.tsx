@@ -28,7 +28,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input({ id, labe
         id={inputId}
         aria-invalid={!!error}
         disabled={disabled}
-        className="w-full rounded-md bg-white focus:border-0 border-0 text-[13px] h-[40px] py-[5px] px-[20px] font-normal"
+        className="w-full rounded-md bg-white focus:border-0 border-0 text-[13px] h-[40px] py-[5px] px-[10px] font-normal"
         {...props}
       />
       {error && (

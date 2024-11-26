@@ -5,6 +5,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
+NEXT_PUBLIC_MAP_API_KEY = "AIzaSyDaOulQACiJzBfqumbsqg_-vKha8fCnL-s"
+
 npm run dev
 # or
 yarn dev
