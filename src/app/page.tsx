@@ -19,7 +19,6 @@ export default function Home() {
       <FeatureSerive />
       <WhyChooseUs />
       <TrustBy />
-      <Footer />
     </>
   )
 }

@@ -1,9 +1,58 @@
 "use client"
-import { Menu } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
+
+type LinkItemType = {
+  currentPath: string;
+  link: string;
+  label: string
+}
+type LinkItemActionType = {
+  onClick: () => void;
+}
+
+type MenuItemType = {
+  id: string;
+  link: string;
+  label: string;
+}
+const MenuItem: MenuItemType[] = [
+  {
+    id: '1',
+    link: '/',
+    label: 'Home'
+  },
+  {
+    id: '2',
+    link: '/service',
+    label: 'Service'
+  },
+  {
+    id: '3',
+    link: '/resource',
+    label: 'Resource'
+  },
+  {
+    id: '4',
+    link: '/contact',
+    label: 'Contact Us'
+  }
+]
+
+const LinkItem = ({ currentPath, link, label, onClick }: LinkItemType & LinkItemActionType) => (
+  <li className={`w-full md:w-auto text-center ${currentPath === link ? 'text-[#efb93f]' : ''}`}>
+    <Link
+      onClick={onClick}
+      href={link}
+      className="block py-3 md:py-[15px] px-5 font-semibold hover:text-[#efb93f] transition duration-300"
+    >
+      {label}
+    </Link>
+  </li>
+)
 
 const Header = () => {
   const pathName = usePathname();
@@ -31,8 +80,12 @@ const Header = () => {
   }, []);
 
   return (
-    <div ref={topSectionRef} className={`${isCurrentHomePage ? 'absolute' : 'relative bg-black'} w-full z-[777] top-0 left-0`}>
-      {/* Top Section */}
+    <div ref={topSectionRef} className={`
+      ${isCurrentHomePage ? 'absolute' : 'relative bg-black'} 
+        w-full z-[777] transition-colors 
+        duration-500 ease-in-out top-0 
+        left-0 ${isMenuOpen && isCurrentHomePage ? 'bg-white' : ''}`}>
+
       <div className="border-b border-[hsla(0,0%,100%,.15)]">
         <div className="hidden md:flex flex-col md:flex-row items-center justify-between py-3.5 px-4 lg:px-44">
           <div className="flex items-center gap-5 mb-4 md:mb-0">
@@ -56,10 +109,10 @@ const Header = () => {
 
           <div className="w-48 md:w-auto">
             <Image
-              src="/icons/logo.svg"
+              src="/icons/logo1.svg"
               alt="logo"
-              width={250}
-              height={250}
+              width={450}
+              height={450}
               className="w-full h-auto"
             />
           </div>
@@ -71,12 +124,12 @@ const Header = () => {
         ref={headerRef}
         className={`w-full z-2 py-3 md:py-5 px-4 lg:px-44 border-b border-[hsla(0,0%,100%,.15)] 
           ${isSticky ? 'fixed top-0 left-0 bg-black' : 'relative bg-transparent'} 
-          transition-all duration-300`}
+          transition-all duration-500`}
       >
-        <div className="md:hidden flex justify-between mb-4">
+        <div className="md:hidden flex justify-between mb-2 mt-2">
           <div className="w-48 md:w-auto">
             <Image
-              src="/icons/logo.svg"
+              src={isMenuOpen && isCurrentHomePage ? '/icons/logo.svg' : '/icons/logo1.svg'}
               alt="logo"
               width={250}
               height={250}
@@ -87,56 +140,26 @@ const Header = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-white p-2"
           >
-            <Menu size={24} />
+            {isMenuOpen ? <X color={isCurrentHomePage ? 'black' : 'white'} /> : <Menu size={24} />}
           </button>
         </div>
 
-        {/* Navigation Links */}
         <ul className={`
           flex flex-col md:flex-row items-center justify-center list-none m-0 p-0 my-0 mx-auto 
-          uppercase text-white text-[13px]
+          uppercase
+          text-[13px]
+          ${isMenuOpen && isCurrentHomePage ? 'text-black' : 'text-white'}
           ${isMenuOpen ? 'block' : 'hidden md:flex'}
         `}>
-          <li className="w-full md:w-auto text-center">
-            <Link
-              href="/"
-              className={`block ${isCurrentHomePage ? 'text-[#efb93f]' : 'text-white'} py-3 md:py-[15px] px-5 font-semibold hover:text-[#efb93f] transition duration-300`}
-            >
-              Home
-            </Link>
-          </li>
-          <li className={`w-full md:w-auto text-center ${pathName === '/service' ? 'text-[#efb93f]' : 'text-white'}`}>
-            <Link
-              href="/"
-              className="block py-3 md:py-[15px] px-5 font-semibold hover:text-[#efb93f] transition duration-300"
-            >
-              Service
-            </Link>
-          </li>
-          <li className="w-full md:w-auto text-center">
-            <Link
-              href="/"
-              className="block py-3 md:py-[15px] px-5 font-semibold hover:text-[#efb93f] transition duration-300"
-            >
-              Protfolio
-            </Link>
-          </li>
-          <li className="w-full md:w-auto text-center">
-            <Link
-              href="/"
-              className="block py-3 md:py-[15px] px-5 font-semibold hover:text-[#efb93f] transition duration-300"
-            >
-              Resource
-            </Link>
-          </li>
-          <li className={`w-full md:w-auto text-center ${pathName === '/contact' ? 'text-[#efb93f]' : 'text-white'}`}>
-            <Link
-              href="/contact"
-              className="block py-3 md:py-[15px] px-5 font-semibold hover:text-[#efb93f] transition duration-300"
-            >
-              Contact Us
-            </Link>
-          </li>
+          {MenuItem.map((item) => (
+            <LinkItem
+              key={item.id}
+              currentPath={pathName}
+              link={item.link}
+              label={item.label}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            />
+          ))}
         </ul>
       </header>
     </div>
