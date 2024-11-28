@@ -8,7 +8,7 @@ import { useEffect, useRef, useState } from 'react';
 type LinkItemType = {
   currentPath: string;
   link: string;
-  label: string
+  label: string;
 }
 type LinkItemActionType = {
   onClick: () => void;
@@ -123,13 +123,13 @@ const Header = () => {
       <header
         ref={headerRef}
         className={`w-full z-2 py-3 md:py-5 px-4 lg:px-44 border-b border-[hsla(0,0%,100%,.15)] 
-          ${isSticky ? 'fixed top-0 left-0 bg-black' : 'relative bg-transparent'} 
+          ${isSticky  ? 'fixed top-0 left-0 bg-black' : 'relative bg-transparent'} 
           transition-all duration-500`}
       >
         <div className="md:hidden flex justify-between mb-2 mt-2">
           <div className="w-48 md:w-auto">
             <Image
-              src={isMenuOpen && isCurrentHomePage ? '/icons/logo.svg' : '/icons/logo1.svg'}
+              src={isMenuOpen && isCurrentHomePage && !isSticky ? '/icons/logo.svg' : '/icons/logo1.svg'}
               alt="logo"
               width={250}
               height={250}
@@ -140,7 +140,7 @@ const Header = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-white p-2"
           >
-            {isMenuOpen ? <X color={isCurrentHomePage ? 'black' : 'white'} /> : <Menu size={24} />}
+            {isMenuOpen ? <X color={isCurrentHomePage && !isSticky ? 'black' : 'white'} /> : <Menu size={24} />}
           </button>
         </div>
 
@@ -148,7 +148,7 @@ const Header = () => {
           flex flex-col md:flex-row items-center justify-center list-none m-0 p-0 my-0 mx-auto 
           uppercase
           text-[13px]
-          ${isMenuOpen && isCurrentHomePage ? 'text-black' : 'text-white'}
+          ${isMenuOpen && isCurrentHomePage && !isSticky ? 'text-black' : 'text-white'}
           ${isMenuOpen ? 'block' : 'hidden md:flex'}
         `}>
           {MenuItem.map((item) => (
