@@ -21,7 +21,6 @@ const ImageSlider = ({ imageList }: ImageSliderType) => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => {
         const nextIndex = prev + 1;
-        // When we reach the end of duplicated list, seamlessly jump back
         if (nextIndex >= imageList.length) {
           return 0;
         }
@@ -39,13 +38,13 @@ const ImageSlider = ({ imageList }: ImageSliderType) => {
           className="flex gap-4 transition-transform duration-500 ease-in-out"
           style={{
             transform: `translateX(-${currentIndex * itemWidth}px)`,
-            width: `${totalWidth * 2}px` // Double the width to accommodate duplicate images
+            width: `${totalWidth * 2}px` 
           }}
         >
           {[...imageList, ...imageList].map((item, index) => (
             <div
               key={`${item.id}-${index}`}
-              className="min-w-[300px] bg-white rounded-lg overflow-hidden shadow-md relative flex-shrink-0"
+              className="bg-white rounded-lg overflow-hidden shadow-md relative flex-shrink-0"
             >
               <Image
                 src={item.image}

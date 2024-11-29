@@ -8,9 +8,6 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      // fontFamily: {
-      //   sans: ['Montserrat', 'sans-serif'],
-      // },
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
@@ -28,10 +25,15 @@ const config: Config = {
         marquee: {
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(-100%)' },
+        },
+        zoom: {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.1)' }
         }
       },
       animation: {
         scroll: 'marquee 35s linear 0s infinite',
+        zoom: 'zoom 5s ease-in-out infinite'
       },
     },
   },

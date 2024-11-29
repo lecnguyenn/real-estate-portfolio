@@ -30,13 +30,18 @@ const MenuItem: MenuItemType[] = [
     link: '/service',
     label: 'Service'
   },
-  {
+    {
     id: '3',
+    link: '/portfolio',
+    label: 'Portfolio'
+  },
+  {
+    id: '4',
     link: '/resource',
     label: 'Resource'
   },
   {
-    id: '4',
+    id: '5',
     link: '/contact',
     label: 'Contact Us'
   }
@@ -94,7 +99,7 @@ const Header = () => {
                 To More Inquri
               </span>
               <h6 className="text-sm md:text-base leading-[20px] text-white hover:text-[#efb93f] transition duration-500">
-                <a href="tel:+990737621432">+990-737 621 432</a>
+                <a href="tel:+84346825006">+84 346 825 006</a>
               </h6>
               <span className="hidden md:block absolute right-[-10px] top-1/2 h-[32px] w-[1px] bg-white/50 transform -translate-y-1/2"></span>
             </div>

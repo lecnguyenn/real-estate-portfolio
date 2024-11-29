@@ -17,12 +17,10 @@ const AboutUs = () => {
               </div>
               <h6 className="text-[17px] font-semibold leading-[30px] pt-5 mb-[5px] text-[#16191e]">Welcome to our NewDay!</h6>
               <p className="text-[#5e5e5e] leading-[30px]">
-                We&apos;re thrilled to have you join our community of automotive
-                enthusiasts and professionals. Whether you&apos;re a
-                passionate driver, a car owner, or someone who loves all
-                things automotive, you&apos;ve come to the right place. At NewDay,
-                we strive to create a space where people can connect,
-                share knowledge, and explore the exciting world of automobiles.
+                NewDay company, located in Vietnam, offers a wide range of services, including photo editing, video listing, virtual staging, and floor plans.
+                It is the best center for your promotional campaigns and expanding your photography business. 
+                Whether you are in real estate and need high-quality images to showcase a home or are presenting products to the retail market,
+                High-quality photos are proven to increase sales, and our editors will make your product or listing stand out from the competition.
               </p>
               <div className="mb-[40px] pt-[25px]">
                 <Image src={'https://neckle-rtl-nextjs.vercel.app/assets/img/home2/home2-about-img2.png'} width={457} height={525} alt="" className="rounded-[10px] object-cover" />

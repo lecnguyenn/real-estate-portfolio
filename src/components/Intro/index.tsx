@@ -11,6 +11,9 @@ const imageBannerSource = [
 	'/images/banner-bg.jpg',
 	'/images/banner-bg2.jpg',
 	'/images/banner-bg3.jpg',
+	'/images/banner-bg4.jpg',
+	'/images/banner-bg5.jpg',
+	'/images/banner-bg6.jpg',
 ]
 
 const Intro = () => {
@@ -43,7 +46,7 @@ const Intro = () => {
 									backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.15) 100%), url(${item})`,
 								}}
 							>
-								<div className="relative flex flex-wrap flex-row-reverse pr-[5%]">
+								<div className="relative flex flex-wrap flex-row-reverse pr-[5%] animate-none">
 									<div>
 										<div className="max-w-[625px] w-full text-white text-right">
 											<h2 className="font-bold not-italic leading-tight text-[50px] sm:text-[60px] xl:text-[75px]">
