@@ -11,11 +11,15 @@ const WhyChooseUs = () => {
         <div className="flex flex-wrap md:flex-nowrap gap-[50px]">
           <div className="relative w-full md:w-6/12 flex items-center justify-center gap-6">
             <div className="relative overflow-hidden rounded-[32px]">
-              <Image src={'https://neckle-rtl-nextjs.vercel.app/assets/img/home2/choose-02.png'} width={350} height={350} alt="" className="object-cover" />
+              <div>
+
+                <Image src={'/images/choose2.jpg'} width={350} height={350} alt="" className="object-cover" />
+              </div>
             </div>
 
             <div className="relative overflow-hidden rounded-[32px]">
-              <Image src={'https://neckle-rtl-nextjs.vercel.app/assets/img/home2/choose-01.png'} width={350} height={350} alt="" className="object-cover" />
+              <Image src={'/images/choose1.jpg'} width={350} height={350} alt="" className="object-cover" />
+
             </div>
 
 

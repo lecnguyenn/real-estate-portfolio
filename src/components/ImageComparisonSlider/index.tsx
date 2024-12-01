@@ -30,20 +30,20 @@ const ImageComparisonSlider = ({ bgImageSource, aboveImageSource }: ImageCompari
       const newPosition = Math.min(Math.max((x / containerWidth) * 100, 0), 100);
       setPosition(newPosition);
     }
-  },[isResizing]);
+  }, [isResizing]);
 
   // Mouse events
   const handleMouseMove = useCallback((e: MouseEvent) => {
     e.preventDefault();
     updatePosition(e.clientX);
-  },[updatePosition]);
+  }, [updatePosition]);
 
   // Touch events
   const handleTouchMove = useCallback((e: TouchEvent) => {
     e.preventDefault();
     const touch = e.touches[0];
     updatePosition(touch.clientX);
-  },[updatePosition]);
+  }, [updatePosition]);
 
   useEffect(() => {
     if (isResizing) {
@@ -76,7 +76,6 @@ const ImageComparisonSlider = ({ bgImageSource, aboveImageSource }: ImageCompari
         onMouseDown={handleStart}
         onTouchStart={handleStart}
       >
-        {/* Bottom Image (After) */}
         <div className="absolute inset-0">
           <div
             className={`absolute top-4 right-4 z-30 bg-[#fff3] text-white px-3 py-1 rounded transition-opacity duration-300 
@@ -92,7 +91,6 @@ const ImageComparisonSlider = ({ bgImageSource, aboveImageSource }: ImageCompari
           />
         </div>
 
-        {/* Top Image (Before) with clip-path */}
         <div
           className="absolute inset-0"
           style={{
@@ -110,7 +108,6 @@ const ImageComparisonSlider = ({ bgImageSource, aboveImageSource }: ImageCompari
           />
         </div>
 
-        {/* Slider Handle */}
         <div
           className="absolute top-0 bottom-0 z-40"
           style={{ left: `${position}%`, transform: 'translateX(-50%)' }}

@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 import { GoogleMapsEmbed } from '@next/third-parties/google'
 import Image from "next/image";
 import Link from "next/link";
@@ -6,10 +6,12 @@ import Link from "next/link";
 import Button from "@/components/base/Button";
 import Input from "@/components/base/Input";
 import TextArea from "@/components/base/TextArea";
+import BreadCrumb from '@/components/BreadCrumb';
 
 const ContactUs = () => {
   return (
     <>
+      <BreadCrumb name='Contact Us' title='For Any Infomation' />
       <div className="relative container mt-16 mx-auto px-3">
         <div className="flex flex-wrap md:flex-nowrap mb-[100px] gap-6">
           <div className="w-full md:w-7/12">
