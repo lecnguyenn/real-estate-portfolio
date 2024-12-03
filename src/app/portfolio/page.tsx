@@ -40,7 +40,7 @@ const data = [
 const Portfolio = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   return (
-    <div>
+    <>
       <BreadCrumb title="Typical Products" name="Portfolio" />
       <div className="container text-center mx-auto mt-16 px-3">
         <div className="mb-[100px]">
@@ -68,7 +68,7 @@ const Portfolio = () => {
           <div className="mt-5">
             <div className="text-center">
               <h2 className="text-[25px] lg:text-[35px] font-bold mb-[5px] leading-[1.5]">GALLERY</h2>
-              <h2 className="text-[16px] text-[#efb93f]">Real Estate Photography</h2>
+              <h2 className="text-[16px] font-sans tracking-[.2em] font-semibold text-[#efb93f]">Real Estate Photography</h2>
             </div>
             <div className="max-w-7xl mx-auto p-4">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -108,7 +108,7 @@ const Portfolio = () => {
           </div>
         )}
       </Modal>
-    </div>
+    </>
   )
 }
 
