@@ -33,7 +33,7 @@ export const data: VideoDataType[] = [
   {
     id: 5,
     video: '/images/editting/video-2.MP4',
-    image: '/images/editting/picture-5.jpg',
+    image: '/images/editting/picture-4.jpg',
     alt: 'video-5'
   },
   {

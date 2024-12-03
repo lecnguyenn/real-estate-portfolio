@@ -5,7 +5,7 @@ export interface VirtualEdittingType {
 export const dataVirtualImages: VirtualEdittingType[] = [
   {
     id: 1,
-    images: '/images/virtual/virtual-1.jpg'
+    images: '/images/virtual/contract-1.jpg'
   },
   {
     id: 2,

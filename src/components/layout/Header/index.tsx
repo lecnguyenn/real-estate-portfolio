@@ -30,7 +30,7 @@ const MenuItem: MenuItemType[] = [
     link: '/service',
     label: 'Service'
   },
-    {
+  {
     id: '3',
     link: '/portfolio',
     label: 'Portfolio'
@@ -114,7 +114,7 @@ const Header = () => {
 
           <div className="w-48 md:w-auto">
             <Image
-              src="/icons/logo1.svg"
+              src="/icons/logo.svg"
               alt="logo"
               width={450}
               height={450}
@@ -128,7 +128,7 @@ const Header = () => {
       <header
         ref={headerRef}
         className={`w-full z-2 py-3 md:py-5 px-4 lg:px-44 border-b border-[hsla(0,0%,100%,.15)] 
-          ${isSticky  ? 'fixed top-0 left-0 bg-black' : 'relative bg-transparent'} 
+          ${isSticky ? 'fixed top-0 left-0 bg-black' : 'relative bg-transparent'} 
           transition-all duration-500`}
       >
         <div className="md:hidden flex justify-between mb-2 mt-2">

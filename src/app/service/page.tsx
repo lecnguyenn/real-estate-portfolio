@@ -2,6 +2,8 @@
 import Tabs from "@/components/base/Tabs";
 import TabItem from "@/components/base/Tabs/TabItem";
 import BreadCrumb from "@/components/BreadCrumb"
+import DayToDusk from "@/components/DayToDusk";
+import ItemRemoval from "@/components/ItemRemoval";
 import PhotoEditting from "@/components/PhotoEditting";
 import VideoStaging from "@/components/VideoStaging";
 import VirtualEditting from "@/components/VirtualEditting";
@@ -25,14 +27,17 @@ const Service = () => {
               <TabItem title="Photo Editting">
                 <PhotoEditting />
               </TabItem>
-              <TabItem title="Video Editing">
+              <TabItem title="Real Estate Video Editing">
                 <VideoStaging />
               </TabItem>
-              <TabItem title="Virtual Staging">
-                <VirtualEditting />
+              <TabItem title="Day To Dusk ">
+                <DayToDusk />
               </TabItem>
-              <TabItem title="Virtual Renovation">List photo</TabItem>
-              <TabItem title="360 Virtual staging">List photo</TabItem>
+              <TabItem title="Item Removal">
+                <ItemRemoval />
+              </TabItem>
+              <TabItem title="Panorama Stitching">List photo</TabItem>
+              <TabItem title="Portrait Retouching">List photo</TabItem>
               <TabItem title="Floor Plan">List photo</TabItem>
             </Tabs>
           </div>
