@@ -12,7 +12,7 @@ const Tabs = ({ children }: TabsProps) => {
   const [selectedTab, setSelectedTab] = useState(0);
   return (
     <div>
-      <div className="flex justify-center mt-5 mb-8 ">
+      <div className="flex flex-wrap justify-center mt-5 mb-8 ">
         {children.map((item, index) => (
           <TabTitle
             key={index}

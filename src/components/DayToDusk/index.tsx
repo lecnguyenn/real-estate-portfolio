@@ -2,7 +2,7 @@ import ImageComparisonSlider from "../ImageComparisonSlider";
 
 const DayToDusk = () => {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-[#16191e] text-left">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-[#16191e] text-center">
             <div>
                 <h5 className="my-6 font-semibold">Brightness & Contrast Adjustment</h5>
                 <ImageComparisonSlider bgImageSource="/images/virtual/contract-2.jpg" aboveImageSource="/images/virtual/contract-1.jpg" />

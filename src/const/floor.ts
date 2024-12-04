@@ -5,19 +5,19 @@ export interface FloorPlanType {
 export const dataFloorImages: FloorPlanType[] = [
   {
     id: 1,
-    images: '/images/floor/floor-1.jpg'
+    images: '/images/floor/floor-1.png'
   },
   {
     id: 2,
-    images: '/images/floor/floor-2.jpg'
+    images: '/images/floor/floor-4.jpg'
   },
   {
     id: 3,
-    images: '/images/floor/floor-3.jpg'
+    images: '/images/floor/floor-3.png'
   },
   {
     id: 4,
-    images: '/images/floor/floor-4.jpg'
+    images: '/images/floor/floor-2.jpg'
   },
   {
     id: 5,

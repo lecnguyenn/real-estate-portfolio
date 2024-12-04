@@ -6,7 +6,11 @@ import DayToDusk from "@/components/DayToDusk";
 import ItemRemoval from "@/components/ItemRemoval";
 import PhotoEditting from "@/components/PhotoEditting";
 import VideoStaging from "@/components/VideoStaging";
-import VirtualEditting from "@/components/VirtualEditting";
+import VirtualEditting from "@/components/PanoramaStitching";
+import PanoramaStitching from "@/components/PanoramaStitching";
+import { dataVirtualImages } from "@/const/virtual-editting";
+import { dataPortraitImages } from "@/const/portrait";
+import { dataFloorImages } from "@/const/floor";
 
 const Service = () => {
   return (
@@ -36,9 +40,15 @@ const Service = () => {
               <TabItem title="Item Removal">
                 <ItemRemoval />
               </TabItem>
-              <TabItem title="Panorama Stitching">List photo</TabItem>
-              <TabItem title="Portrait Retouching">List photo</TabItem>
-              <TabItem title="Floor Plan">List photo</TabItem>
+              <TabItem title="Panorama Stitching">
+                <PanoramaStitching data={dataVirtualImages} />
+              </TabItem>
+              <TabItem title="Portrait Retouching">
+                <PanoramaStitching data={dataPortraitImages} className="md:grid-cols-4" />
+              </TabItem>
+              <TabItem title="Floor Plan">
+                <PanoramaStitching data={dataFloorImages} className="md:grid-cols-3" />
+              </TabItem>
             </Tabs>
           </div>
         </div>
