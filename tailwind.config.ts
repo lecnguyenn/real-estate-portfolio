@@ -36,7 +36,7 @@ const config: Config = {
       },
       animation: {
         scroll: 'marquee 35s linear 0s infinite',
-        zoom: 'zoom 5s ease-in-out infinite'
+        zoom: 'zoom 2s ease-in-out '
       },
     },
   },

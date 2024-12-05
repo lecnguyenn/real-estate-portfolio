@@ -1,8 +1,10 @@
 "use client"
 import Image from "next/image"
 import { useState } from "react"
-import Modal from "../base/Modal"
+
 import { data, VideoDataType } from "@/const/video"
+
+import Modal from "../base/Modal"
 
 
 const VideoStaging = () => {

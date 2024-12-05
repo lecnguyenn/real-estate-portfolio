@@ -1,7 +1,9 @@
 "use client"
-import { dataVirtualImages, VirtualEdittingType } from "@/const/virtual-editting";
 import Image from "next/image"
 import { useState } from "react";
+
+import { VirtualEdittingType } from "@/const/virtual-editting";
+
 import Modal from "../base/Modal";
 
 
