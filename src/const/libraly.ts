@@ -26,11 +26,6 @@ export const LibraryData: LibraryDataType[] = [
         description: 'They can be easily used for any outdoor photos'
     },
     {
-        image: '/images/resource/tree.png',
-        title: 'Tree',
-        description: 'They can be easily used for any outdoor photos'
-    },
-    {
         image: '/images/resource/TV.jpeg',
         title: 'TV Screen Graphics',
         description: 'Replace the TV screen with graphics is the best solution make boring black TV screen looks attractive'

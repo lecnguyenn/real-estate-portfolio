@@ -1,16 +1,70 @@
-import { ChevronDown, ChevronUp} from 'lucide-react';
-import React, { useState } from 'react';
+"use client"
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react';
 
 
-interface AccordionType {
-    children: React.ReactNode
+export interface AccordionData {
+    title: string;
+    content: React.ReactNode;
 }
-const Accordion = ({ children }: AccordionType) => {
+interface AccordionProps {
+    data: AccordionData;
+    isOpen: boolean;
+    onClick: () => void;
+}
 
+interface ItemProps {
+    items: AccordionData[];
+}
+const AccordionItem = ({ data, isOpen, onClick }: AccordionProps) => {
     const [height, setHeight] = useState(0);
-    <div className="">
-        Accordion
-    </div>
+    const contentEl = useRef<HTMLDivElement>(null);
+
+
+    useEffect(() => {
+        if (isOpen) {
+            const t = contentEl.current;
+            t && setHeight(t.scrollHeight + 25);
+        } else {
+            setHeight(0);
+        }
+    }, [isOpen])
+
+    return (
+        <div className="w-full rounded-[5px] border border-[hsla(0,0%,93%,.5)] bg-[#faf8fb] mb-[15px]">
+            <div className='flex justify-between py-[15px] pl-[25px] pr-[15px] transition transform duration-2000 ease-in-out' onClick={onClick}>
+                <h1 className="text-[15px] text-[#16191e] font-semibold leading-[1.4]">{data.title}</h1>
+                {isOpen ? <ChevronUp /> : <ChevronDown />}
+            </div>
+            <div ref={contentEl} className='overflow-hidden text-[15px]
+             text-[#5e5e5e] text-left
+              leading-[28px] pt-0 px-[25px]
+              transition transform duration-200 ease-in-out
+              ' style={{ height }}>
+                {data.content}
+            </div>
+        </div>
+    )
+}
+
+const Accordion = ({ items }: ItemProps) => {
+    const [currentId, setCurrentId] = useState(0);
+
+    const handleClick = (index: number) => {
+        setCurrentId((currentValue) => currentValue !== index ? index : -1)
+    }
+    return (
+        <div>
+            {items.map((item, index) => (
+                <AccordionItem
+                    key={index}
+                    data={item}
+                    isOpen={index === currentId}
+                    onClick={() => handleClick(index)}
+                />
+            ))}
+        </div>
+    )
 }
 
 export default Accordion;

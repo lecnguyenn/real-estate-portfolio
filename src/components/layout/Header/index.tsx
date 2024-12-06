@@ -92,7 +92,7 @@ const Header = () => {
         left-0 ${isMenuOpen && isCurrentHomePage ? 'bg-white' : ''}`}>
 
       <div className="border-b border-[hsla(0,0%,100%,.15)]">
-        <div className="hidden md:flex flex-col md:flex-row items-center justify-between py-3.5 px-4 lg:px-44">
+        <div className="hidden md:flex flex-col md:flex-row items-center justify-between py-3.5 px-4 lg:px-36">
           <div className="flex items-center gap-5 mb-4 md:mb-0">
             <div className="relative flex flex-col font-semibold text-end">
               <span className="text-xs md:text-[14px] text-[hsla(0,0%,100%,.8)] mb-[5px]">
@@ -112,13 +112,13 @@ const Header = () => {
             />
           </div>
 
-          <div className="w-48 md:w-auto">
+          <div className="w-30 md:w-auto">
             <Image
-              src="/icons/logo.svg"
+              src="/images/LOGO-2.svg"
               alt="logo"
-              width={450}
-              height={450}
-              className="w-full h-auto"
+              width={50}
+              height={100}
+              className="w-[35%] h-auto"
             />
           </div>
         </div>
