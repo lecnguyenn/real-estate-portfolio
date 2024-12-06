@@ -14,7 +14,7 @@ type ImageSliderType = {
 
 const ImageSlider = ({ imageList }: ImageSliderType) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemWidth = 300 + 16; // width + gap
+  const itemWidth = 230 + 16; 
   const totalWidth = imageList.length * itemWidth;
 
   useEffect(() => {
@@ -41,17 +41,17 @@ const ImageSlider = ({ imageList }: ImageSliderType) => {
             width: `${totalWidth * 2}px` 
           }}
         >
-          {[...imageList, ...imageList].map((item, index) => (
+          {[...imageList, ...imageList, ...imageList, ...imageList].map((item, index) => (
             <div
               key={`${item.id}-${index}`}
-              className="bg-white rounded-lg overflow-hidden shadow-md relative flex-shrink-0"
+              className="bg-white border border-solid border-[rgba(0,0,0,.08)] rounded-[10px] overflow-hidden shadow-md relative flex-shrink-0"
             >
               <Image
                 src={item.image}
-                width={250}
-                height={240}
+                width={230}
+                height={200}
                 alt={item.name}
-                className="object-cover"
+                className="w-full object-cover"
               />
             </div>
           ))}

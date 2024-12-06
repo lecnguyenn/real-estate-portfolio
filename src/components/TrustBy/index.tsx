@@ -25,11 +25,6 @@ const companyList = [{
   name: "company5",
   image: "/images/company5.png"
 },
-{
-  id: 6,
-  name: "company6",
-  image: "/images/company6.png"
-},
 ]
 
 const TrustBy = () => {
@@ -48,7 +43,6 @@ const TrustBy = () => {
         </div>
         <div className="mt-[30px]">
           <ImageSlider imageList={companyList} />
-
         </div>
       </div>
 

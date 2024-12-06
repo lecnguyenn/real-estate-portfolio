@@ -134,7 +134,7 @@ const Header = () => {
         <div className="md:hidden flex justify-between mb-2 mt-2">
           <div className="w-48 md:w-auto">
             <Image
-              src={isMenuOpen && isCurrentHomePage && !isSticky ? '/icons/logo.svg' : '/icons/logo1.svg'}
+              src={isMenuOpen && isCurrentHomePage && !isSticky ? '/images/LOGO-1.svg' : '/images/LOGO-2.svg'}
               alt="logo"
               width={250}
               height={250}

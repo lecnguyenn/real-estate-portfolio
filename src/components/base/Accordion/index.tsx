@@ -24,7 +24,7 @@ const AccordionItem = ({ data, isOpen, onClick }: AccordionProps) => {
     useEffect(() => {
         if (isOpen) {
             const t = contentEl.current;
-            t && setHeight(t.scrollHeight + 25);
+            setHeight(t.scrollHeight + 25);
         } else {
             setHeight(0);
         }
@@ -32,15 +32,20 @@ const AccordionItem = ({ data, isOpen, onClick }: AccordionProps) => {
 
     return (
         <div className="w-full rounded-[5px] border border-[hsla(0,0%,93%,.5)] bg-[#faf8fb] mb-[15px]">
-            <div className='flex justify-between py-[15px] pl-[25px] pr-[15px] transition transform duration-2000 ease-in-out' onClick={onClick}>
+            <div className='flex justify-between py-[15px] pl-[25px] pr-[15px] transition-transform duration-300 ease-in-out' onClick={onClick}>
                 <h1 className="text-[15px] text-[#16191e] font-semibold leading-[1.4]">{data.title}</h1>
                 {isOpen ? <ChevronUp /> : <ChevronDown />}
             </div>
-            <div ref={contentEl} className='overflow-hidden text-[15px]
+            <div ref={contentEl} 
+            className='
+            overflow-hidden text-[15px]
              text-[#5e5e5e] text-left
-              leading-[28px] pt-0 px-[25px]
-              transition transform duration-200 ease-in-out
-              ' style={{ height }}>
+            leading-[28px] pt-0 px-[25px]
+             transition-all 
+              duration-300 
+              ease-in-out ' 
+              style={{ height }}
+              >
                 {data.content}
             </div>
         </div>
@@ -48,7 +53,7 @@ const AccordionItem = ({ data, isOpen, onClick }: AccordionProps) => {
 }
 
 const Accordion = ({ items }: ItemProps) => {
-    const [currentId, setCurrentId] = useState(0);
+    const [currentId, setCurrentId] = useState(-1);
 
     const handleClick = (index: number) => {
         setCurrentId((currentValue) => currentValue !== index ? index : -1)
