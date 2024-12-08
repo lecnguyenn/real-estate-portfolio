@@ -38,6 +38,7 @@ const VideoStaging = () => {
         isOpen={!!selectedImage}
         onDismiss={() => setSelectedImage(null)}
       >
+
         <video width={1000} height={500} controls autoPlay playsInline preload="none" >
           <source src={selectedImage?.video} type="video/mp4" />
           Your browser does not support the video tag.
