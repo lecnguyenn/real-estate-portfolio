@@ -35,8 +35,7 @@ const TrustBy = () => {
       }}
     >
       <div className="container mx-auto">
-        <div className="flex justify-center lg:justify-between">
-          <div></div>
+        <div className="flex justify-center">
           <div>
             <h2 className="text-[30px] lg:text-[40px] font-bold mb-[5px] leading-[1.3]">Trusted & Relied On</h2>
           </div>

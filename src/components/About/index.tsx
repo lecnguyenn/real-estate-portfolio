@@ -18,7 +18,7 @@ const AboutUs = () => {
               <h6 className="text-[17px] font-semibold leading-[30px] pt-5 mb-[5px] text-[#16191e]">Welcome to our NewDay!</h6>
               <p className="text-[#5e5e5e] leading-[30px]">
                 NewDay company, located in Vietnam, offers a wide range of services, including photo editing, video listing, virtual staging, and floor plans.
-                It is the best center for your promotional campaigns and expanding your photography business. 
+                It is the best center for your promotional campaigns and expanding your photography business.
                 Whether you are in real estate and need high-quality images to showcase a home or are presenting products to the retail market,
                 High-quality photos are proven to increase sales, and our editors will make your product or listing stand out from the competition.
               </p>
@@ -44,7 +44,7 @@ const AboutUs = () => {
                   <p className="text-[#5e5e5e] text-sm font-semibold">Experience</p>
                 </div>
                 <div>
-                  <Image src={'/icons/home1.svg'} width={40} height={40} alt="" />
+                  <Image src={'/icons/development.svg'} width={40} height={40} alt="" />
                 </div>
               </div>
               <div className="flex items-center gap-[16px]">
@@ -56,7 +56,7 @@ const AboutUs = () => {
                   <p className="text-[#5e5e5e] text-sm font-semibold">Customer</p>
                 </div>
                 <div>
-                  <Image src={'/icons/home1.svg'} width={40} height={40} alt="" />
+                  <Image src={'/icons/office.svg'} width={40} height={40} alt="" />
                 </div>
               </div>
               <div className="flex items-center gap-[16px]">

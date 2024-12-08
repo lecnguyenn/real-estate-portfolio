@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Tag, Send, AudioLines, ShieldMinus, ChevronsRight } from 'lucide-react';
+import { Tag, Send, AudioLines, ShieldMinus, ChevronsRight, ChevronDown } from 'lucide-react';
 import BreadCrumb from "@/components/BreadCrumb";
 import { LibraryData } from "@/const/libraly";
 import Accordion from "@/components/base/Accordion";
@@ -34,28 +34,28 @@ const Resource = () => {
           <div className="mb-[20px]">
             <h1 className="text-[24px] text-left font-semibold pr-[25px] text-[#16191e]">Free Consultation</h1>
           </div>
-          <div className="flex flex-wrap md:flex-nowrap items-center justify-center text-[#16191e] gap-[10px]">
+          <div className="flex flex-col flex-wrap md:flex-nowrap md:flex-row items-center justify-center text-[#16191e] gap-[10px]">
             <div className="md:w-[60%] border border-dashed border-[#eee] rounded-[10px] py-[30px] px-[20px] hover:border-[#efb93f]">
               <div className="flex items-center justify-center gap-4">
                 <Tag />
                 <p>Contact us</p>
               </div>
             </div>
-            <ChevronsRight />
+            <ChevronsRight className="transform rotate-90 md:rotate-0" />
             <div className="md:w-[60%] border border-dashed border-[#eee] rounded-[10px] py-[30px] px-[20px] hover:border-[#efb93f]">
               <div className="flex items-center justify-center gap-4">
                 <AudioLines />
                 <p>We Listen</p>
               </div>
             </div>
-            <ChevronsRight />
+            <ChevronsRight className="transform rotate-90 md:rotate-0" />
             <div className="md:w-[60%] border border-dashed border-[#eee] rounded-[10px] py-[30px] px-[20px] hover:border-[#efb93f]">
               <div className="flex items-center justify-center gap-4">
                 <ShieldMinus />
                 <p>Relax</p>
               </div>
             </div>
-            <ChevronsRight />
+            <ChevronsRight className="transform rotate-90 md:rotate-0" />
             <div className="md:w-[60%] border border-dashed border-[#eee] rounded-[10px] py-[30px] px-[20px] hover:border-[#efb93f]">
               <div className="flex items-center justify-center gap-4">
                 <Send />

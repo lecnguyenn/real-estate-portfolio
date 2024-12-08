@@ -12,18 +12,18 @@ export const LibraryData: LibraryDataType[] = [
     },
     {
         image: '/images/resource/cross-way.jpg',
-        title: 'Cross Way',
-        description: 'Lawn needs to be improved. Replacing grass can help'
+        title: 'House Wall',
+        description: 'A beautiful wall will bring more beauty to your home'
     },
     {
         image: '/images/resource/grass.jpg',
         title: 'Grass',
-        description: 'They can be easily used for any outdoor photos'
+        description: 'Lawn needs to be improved. Replacing grass can help'
     },
     {
         image: '/images/resource/sky.jpg',
         title: 'Virtual Sunset Skies',
-        description: 'They can be easily used for any outdoor photos'
+        description: 'Dramatic sunset sky gives your photos a magical charm'
     },
     {
         image: '/images/resource/TV.jpeg',

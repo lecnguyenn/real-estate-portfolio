@@ -6,9 +6,7 @@ const Footer = () => {
       <div className="flex flex-wrap justify-between items-center text-white mx-[65px] py-[25px] gap-[40px]">
         <div className="w-full lg:w-4/12">
           <Image src={'/images/LOGO-2.svg'} width={200} height={200} alt="" />
-          <p className="mt-[20px] text-[#b3b3b3] leading-[30px]">NewDay provides a wide range of media
-            services from real estate. Contact us today
-            to customize your event coverage.
+          <p className="mt-[5px] text-[#b3b3b3] leading-[30px]">NewDay offers comprehensive media solutions tailored for the real estate industry. Let us help you create customized event coverage that stands out—contact us today!
           </p>
         </div>
         <div className="flex gap-4">

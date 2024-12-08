@@ -26,15 +26,12 @@ const Intro = () => {
 					navigation={true}
 					pagination={{
 						clickable: true,
-						renderBullet: (_, className) => {
-							return '<span class=\"' + className + '\">' + '</span>';
-						},
 					}}
 					className='flex'
-					autoplay={{
-						delay: 2500,
-						disableOnInteraction: false
-					}}
+					// autoplay={{
+					// 	delay: 2500,
+					// 	disableOnInteraction: false
+					// }}
 					loop={true}
 					modules={[EffectFade, Navigation, Pagination, Autoplay]}
 				>

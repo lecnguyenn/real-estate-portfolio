@@ -14,7 +14,7 @@ type ImageSliderType = {
 
 const ImageSlider = ({ imageList }: ImageSliderType) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemWidth = 230 + 16; 
+  const itemWidth = 300 + 16;
   const totalWidth = imageList.length * itemWidth;
 
   useEffect(() => {
@@ -38,7 +38,7 @@ const ImageSlider = ({ imageList }: ImageSliderType) => {
           className="flex gap-4 transition-transform duration-500 ease-in-out"
           style={{
             transform: `translateX(-${currentIndex * itemWidth}px)`,
-            width: `${totalWidth * 2}px` 
+            // width: `md:${totalWidth * 2}px`
           }}
         >
           {[...imageList, ...imageList, ...imageList, ...imageList].map((item, index) => (
@@ -51,7 +51,7 @@ const ImageSlider = ({ imageList }: ImageSliderType) => {
                 width={230}
                 height={200}
                 alt={item.name}
-                className="w-full object-cover"
+                className="object-cover"
               />
             </div>
           ))}

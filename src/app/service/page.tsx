@@ -19,11 +19,11 @@ const Service = () => {
         <div className="container text-center mx-auto mt-16 px-3">
           <div className="mb-[80px]">
             <p>Welcome to <b className="text-[#efb93f]">NewDay</b>
-              , where we bring your special moments to life through our top-notch photo booth service.
+              , where we turn your special moments into lasting memories with our premium photo booth and video services.
             </p>
             <span>
-              We understand the importance of capturing memories that will last a lifetime. Our cutting-edge photo booth technology ensures that every smile, every laugh,
-              and every silly pose is captured in stunning detail.
+              We know how important it is to capture the joy and laughter that make your events unforgettable.
+              With our state-of-the-art photo booth technology, every smile, every laugh, and every fun pose is preserved in stunning detail.
             </span>
           </div>
           <div>
