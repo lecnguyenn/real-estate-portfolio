@@ -27,7 +27,7 @@ const data: dataType[] = [
   },
   {
     id: 4,
-    image: '/images/portfolio/picture-4.jpg',
+    image: '/images/portfolio/picture-4.JPG',
     alt: 'picture-1'
   },
   {
@@ -37,7 +37,7 @@ const data: dataType[] = [
   },
   {
     id: 6,
-    image: '/images/portfolio/picture-6.jpg',
+    image: '/images/portfolio/picture-6.JPG',
     alt: 'picture-1'
   }
 ]
