@@ -4,8 +4,12 @@ import { useState } from "react";
 
 import Modal from "@/components/base/Modal";
 import BreadCrumb from "@/components/BreadCrumb";
-
-const data = [
+interface dataType {
+  id: number;
+  image: string;
+  alt: string;
+}
+const data: dataType[] = [
   {
     id: 1,
     image: '/images/portfolio/picture-1.jpg',
@@ -38,7 +42,7 @@ const data = [
   }
 ]
 const Portfolio = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState<dataType | null>(null);
   return (
     <>
       <BreadCrumb title="Typical Products" name="Portfolio" />

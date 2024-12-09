@@ -15,7 +15,6 @@ type ImageSliderType = {
 const ImageSlider = ({ imageList }: ImageSliderType) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const itemWidth = 300 + 16;
-  const totalWidth = imageList.length * itemWidth;
 
   useEffect(() => {
     const interval = setInterval(() => {

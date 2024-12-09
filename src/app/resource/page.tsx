@@ -1,9 +1,10 @@
+import { AudioLines, ChevronsRight,Send, ShieldMinus, Tag } from 'lucide-react';
 import Image from "next/image";
-import { Tag, Send, AudioLines, ShieldMinus, ChevronsRight, ChevronDown } from 'lucide-react';
-import BreadCrumb from "@/components/BreadCrumb";
-import { LibraryData } from "@/const/libraly";
+
 import Accordion from "@/components/base/Accordion";
+import BreadCrumb from "@/components/BreadCrumb";
 import { FAQ } from "@/const/faq";
+import { LibraryData } from "@/const/libraly";
 
 const Resource = () => {
 

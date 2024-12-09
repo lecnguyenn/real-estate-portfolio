@@ -23,8 +23,9 @@ const AccordionItem = ({ data, isOpen, onClick }: AccordionProps) => {
 
     useEffect(() => {
         if (isOpen) {
-            const t = contentEl.current;
-            setHeight(t.scrollHeight + 25);
+            if (contentEl.current) {
+                setHeight(contentEl.current.scrollHeight + 25);
+            }
         } else {
             setHeight(0);
         }
@@ -36,16 +37,16 @@ const AccordionItem = ({ data, isOpen, onClick }: AccordionProps) => {
                 <h1 className="text-[15px] text-[#16191e] font-semibold leading-[1.4]">{data.title}</h1>
                 {isOpen ? <ChevronUp /> : <ChevronDown />}
             </div>
-            <div ref={contentEl} 
-            className='
+            <div ref={contentEl}
+                className='
             overflow-hidden text-[15px]
              text-[#5e5e5e] text-left
             leading-[28px] pt-0 px-[25px]
              transition-all 
               duration-300 
-              ease-in-out ' 
-              style={{ height }}
-              >
+              ease-in-out '
+                style={{ height }}
+            >
                 {data.content}
             </div>
         </div>

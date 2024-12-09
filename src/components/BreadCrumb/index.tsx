@@ -1,5 +1,4 @@
-import { usePathname } from "next/navigation";
-import { title } from "process";
+import Link from "next/link";
 
 type BreadCrumbPropertyType = {
   title: string;
@@ -23,7 +22,7 @@ const BreadCrumb = ({ title, name }: BreadCrumbPropertyType) => {
                 <li className="text-[14px] font-semibold">{name}</li>
                 <div className="h-[1px] w-[10px] bg-[#efb93f]"></div>
                 <li className="text-[#efb93f] font-semibold text-[14px]">
-                  <a href="/">Home</a>
+                  <Link href="/">Home</Link>
                 </li>
               </ul>
             </div>

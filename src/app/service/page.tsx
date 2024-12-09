@@ -4,13 +4,12 @@ import TabItem from "@/components/base/Tabs/TabItem";
 import BreadCrumb from "@/components/BreadCrumb"
 import DayToDusk from "@/components/DayToDusk";
 import ItemRemoval from "@/components/ItemRemoval";
+import PanoramaStitching from "@/components/PanoramaStitching";
 import PhotoEditting from "@/components/PhotoEditting";
 import VideoStaging from "@/components/VideoStaging";
-import VirtualEditting from "@/components/PanoramaStitching";
-import PanoramaStitching from "@/components/PanoramaStitching";
-import { dataVirtualImages } from "@/const/virtual-editting";
-import { dataPortraitImages } from "@/const/portrait";
 import { dataFloorImages } from "@/const/floor";
+import { dataPortraitImages } from "@/const/portrait";
+import { dataVirtualImages } from "@/const/virtual-editting";
 
 const Service = () => {
   return (
