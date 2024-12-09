@@ -9,7 +9,7 @@ const TabTitle = ({ title, index, selected, seletectedTab }: TabTitleProps) => (
   <div
     className={`w-auto py-2 px-4 cursor-pointer
        ${selected ? 'text-white bg-[#16191e]' : 'text-[#16191e] bg-white'}
-        text-[14px] rounded duration-[0.5]
+        text-[14px] rounded
        `}
     onClick={() => seletectedTab(index)}
   >
