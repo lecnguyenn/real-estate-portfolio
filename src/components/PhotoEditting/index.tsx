@@ -9,7 +9,7 @@ const PhotoEditting = () => {
             </div>
             <div>
                 <h5 className="my-6 font-semibold">Color Correction</h5>
-                <ImageComparisonSlider bgImageSource="/images/editting/color-2.jpg" aboveImageSource="/images/editting/color-1.jpg" />
+                <ImageComparisonSlider bgImageSource="/images/editting/color-2.JPG" aboveImageSource="/images/editting/color-1.JPG" />
             </div>
             <div>
                 <h5 className="my-6 font-semibold">Lens Distoration Correction</h5>

@@ -5,7 +5,7 @@ const ItemRemoval = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-[#16191e] text-center">
       <div>
         <h5 className="my-6 font-semibold">Basic Retouching</h5>
-        <ImageComparisonSlider bgImageSource="/images/removal/retouching-1.jpg" aboveImageSource="/images/removal/retouching-2.jpg" />
+        <ImageComparisonSlider bgImageSource="/images/removal/retouching-1.JPG" aboveImageSource="/images/removal/retouching-2.jpg" />
       </div>
       <div>
         <h5 className="my-6 font-semibold">Standard Retouching</h5>

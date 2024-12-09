@@ -19,11 +19,11 @@ export const dataPortraitImages: VirtualEdittingType[] = [
   },
   {
     id: 5,
-    images: '/images/portrait/picture-5.jpg'
+    images: '/images/portrait/picture-5.JPG'
   },
   {
     id: 6,
-    images: '/images/portrait/picture-6.jpg'
+    images: '/images/portrait/picture-6.JPG'
   },
   {
     id: 7,
