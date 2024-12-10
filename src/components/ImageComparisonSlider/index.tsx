@@ -88,6 +88,7 @@ const ImageComparisonSlider = ({ bgImageSource, aboveImageSource }: ImageCompari
             alt="after"
             fill
             className="w-full h-full object-cover"
+            priority
           />
         </div>
 
@@ -105,6 +106,7 @@ const ImageComparisonSlider = ({ bgImageSource, aboveImageSource }: ImageCompari
             alt="before"
             fill
             className="w-full h-full object-cover"
+            priority
           />
         </div>
 

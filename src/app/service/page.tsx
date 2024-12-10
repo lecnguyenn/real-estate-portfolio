@@ -17,12 +17,11 @@ const Service = () => {
       <BreadCrumb name="Service" title="OutStanding Service" /><div className="relative container mt-16px mx-auto px-3">
         <div className="container text-center mx-auto mt-16 px-3">
           <div className="mb-[80px]">
-            <p>Welcome to <b className="text-[#efb93f]">NewDay</b>
-              , where we turn your special moments into lasting memories with our premium photo booth and video services.
+            <p><b className="text-[#efb93f]">NewDay</b> is a real estate photo editing team based in Vietnam. We offer photographers a comprehensive suite of services, including Image Enhancement, day-to-dusk conversions, Twilight edits, Virtual Staging, and Floor Plans.
+              Our goal is to help photographers save time and grow their businesses by providing High-Quality Photo and Video Editing Services and professional services.
             </p>
             <span>
-              We know how important it is to capture the joy and laughter that make your events unforgettable.
-              With our state-of-the-art photo booth technology, every smile, every laugh, and every fun pose is preserved in stunning detail.
+              Our samples are available in the Outstanding Service. We welcome your feedback and encourage you to contact us today for a free trial.
             </span>
           </div>
           <div>

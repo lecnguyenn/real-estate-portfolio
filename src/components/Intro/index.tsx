@@ -28,10 +28,10 @@ const Intro = () => {
 						clickable: true,
 					}}
 					className='flex'
-					// autoplay={{
-					// 	delay: 2500,
-					// 	disableOnInteraction: false
-					// }}
+					autoplay={{
+						delay: 2500,
+						disableOnInteraction: false
+					}}
 					loop={true}
 					modules={[EffectFade, Navigation, Pagination, Autoplay]}
 				>
