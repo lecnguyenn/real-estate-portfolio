@@ -20,7 +20,6 @@ const Modal = ({ isOpen, onDismiss, children }: ModalProps) => {
   return (
     <DialogOverlay
       isOpen={isOpen}
-      onDismiss={onDismiss}
       className="fixed inset-0 flex items-center justify-center bg-[rgba(0,0,0,0.74)] z-50 px-4"
     >
       <DialogContent

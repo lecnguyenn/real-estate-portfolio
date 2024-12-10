@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import Modal from "@/components/base/Modal";
 import BreadCrumb from "@/components/BreadCrumb";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 interface dataType {
   id: number;
   image: string;
@@ -43,6 +44,18 @@ const data: dataType[] = [
 ]
 const Portfolio = () => {
   const [selectedImage, setSelectedImage] = useState<dataType | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const handleNextImage = () => {
+    const nextIndex = (currentImageIndex + 1) % data.length;
+    setSelectedImage(data[nextIndex]);
+    setCurrentImageIndex(nextIndex);
+  };
+  const handlePrevImage = () => {
+    const prevIndex = (currentImageIndex - 1 + data.length) % data.length;
+    setSelectedImage(data[prevIndex]);
+    setCurrentImageIndex(prevIndex);
+  };
   return (
     <>
       <BreadCrumb title="Typical Products" name="Portfolio" />
@@ -79,7 +92,10 @@ const Portfolio = () => {
                 {data.map((item, index) => (
                   <div
                     key={index}
-                    onClick={() => setSelectedImage(item)}
+                    onClick={() => {
+                      setSelectedImage(item)
+                      setCurrentImageIndex(index)
+                    }}
                     className="cursor-pointer hover:opacity-90 transition-opacity"
                   >
                     <Image
@@ -101,14 +117,26 @@ const Portfolio = () => {
         onDismiss={() => setSelectedImage(null)}
       >
         {selectedImage && (
-          <div className="relative max-w-full max-h-[90vh] flex items-center justify-center">
+          <div className="relative max-w-full max-h-[50vh] flex items-center justify-center">
+            <button
+              onClick={handlePrevImage}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 text-white p-2 rounded-full"
+            >
+              <ChevronLeft size={24} />
+            </button>
             <Image
               src={selectedImage.image}
               alt="Full view image"
               width={1000}
               height={500}
-              className="max-w-full max-h-[90vh] object-contain"
+              className="max-w-full max-h-[50vh] object-contain"
             />
+            <button
+              onClick={handleNextImage}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 text-white p-2 rounded-full"
+            >
+              <ChevronRight size={24} />
+            </button>
           </div>
         )}
       </Modal>

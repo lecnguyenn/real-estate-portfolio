@@ -39,10 +39,10 @@ const Service = () => {
                 <ItemRemoval />
               </TabItem>
               <TabItem title="Panorama Stitching">
-                <PanoramaStitching data={dataVirtualImages} />
+                <PanoramaStitching data={dataVirtualImages} className="md:grid-cols-4" />
               </TabItem>
               <TabItem title="Portrait Retouching">
-                <PanoramaStitching data={dataPortraitImages} className="md:grid-cols-4" />
+                <PanoramaStitching data={dataPortraitImages} className="md:grid-cols-3" />
               </TabItem>
               <TabItem title="Floor Plan">
                 <PanoramaStitching data={dataFloorImages} className="md:grid-cols-3" />

@@ -35,8 +35,4 @@ export const dataVirtualImages: VirtualEdittingType[] = [
     id: 7,
     images: '/images/stitching/stitching-8.jpg'
   },
-  {
-    id: 9,
-    images: '/images/stitching/stitching-9.jpg'
-  },
 ] 

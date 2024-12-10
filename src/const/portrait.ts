@@ -13,10 +13,10 @@ export const dataPortraitImages: VirtualEdittingType[] = [
     id: 3,
     images: '/images/portrait/picture-3.jpg'
   },
-  {
-    id: 4,
-    images: '/images/portrait/picture-4.jpg'
-  },
+  // {
+  //   id: 4,
+  //   images: '/images/portrait/picture-4.jpg'
+  // },
   {
     id: 5,
     images: '/images/portrait/picture-5.JPG'
@@ -29,8 +29,8 @@ export const dataPortraitImages: VirtualEdittingType[] = [
     id: 7,
     images: '/images/portrait/picture-7.jpg'
   },
-  {
-    id: 8,
-    images: '/images/portrait/picture-8.jpg'
-  },
+  // {
+  //   id: 8,
+  //   images: '/images/portrait/picture-8.jpg'
+  // },
 ] 
