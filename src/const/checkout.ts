@@ -19,11 +19,11 @@ export const dataCheckoutImages: VirtualEdittingType[] = [
   },
   {
     id: 5,
-    images: '/images/checkout/picture-5.JPG'
+    images: '/images/checkout/picture-5.jpg'
   },
   {
     id: 6,
-    images: '/images/checkout/picture-6.JPG'
+    images: '/images/checkout/picture-6.jpg'
   },
   {
     id: 7,
