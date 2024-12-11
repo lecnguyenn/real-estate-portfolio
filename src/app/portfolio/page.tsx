@@ -1,10 +1,10 @@
 "use client"
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
 import Modal from "@/components/base/Modal";
 import BreadCrumb from "@/components/BreadCrumb";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 interface dataType {
   id: number;
   image: string;

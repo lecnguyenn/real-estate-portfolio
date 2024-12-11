@@ -36,6 +36,9 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/images/logo.png" />
+      </head>
       <body className={`${montserrat.variable} ${openSans.variable} antialiased`}>
         <div className='flex-grow'>
           <Header />

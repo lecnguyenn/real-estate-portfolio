@@ -12,7 +12,7 @@ const AboutUs = () => {
           <div className="md:w-7/12 text-left order-2 md:order-1">
             <div className="text-left">
               <div>
-                <span className="font-semibold text-[16px] mb-[5px] text-[#efb93f] tracking-[.2em]">(Since-2020)</span>
+                <span className="font-semibold text-[16px] mb-[5px] text-[#efb93f] tracking-[.2em]">(Since-1994)</span>
                 <h2 className="font-bold text-[30px] lg:text-[40px] mb-0 text-[#16191e]">Get To Know About NewDay</h2>
               </div>
               <h6 className="text-[17px] font-semibold leading-[30px] pt-5 mb-[5px] text-[#16191e]">Welcome to our NewDay!</h6>

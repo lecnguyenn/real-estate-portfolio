@@ -24,10 +24,6 @@ const Intro = () => {
 					spaceBetween={30}
 					effect={'fade'}
 					navigation={true}
-					pagination={{
-						clickable: true,
-					}}
-					className='flex'
 					autoplay={{
 						delay: 2500,
 						disableOnInteraction: false

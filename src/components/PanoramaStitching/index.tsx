@@ -1,11 +1,11 @@
 "use client"
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image"
 import { useState } from "react";
 
 import { VirtualEdittingType } from "@/const/virtual-editting";
 
 import Modal from "../base/Modal";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 
 const PanoramaStitching = ({ data, className }: { data: VirtualEdittingType[], className?: string }) => {
