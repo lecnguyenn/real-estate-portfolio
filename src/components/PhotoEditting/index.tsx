@@ -21,11 +21,11 @@ const PhotoEditting = () => {
             </div>
             <div>
                 <h5 className="my-6 font-semibold">Photographer & Reflection Removal</h5>
-                <ImageComparisonSlider bgImageSource="/images/editting/photo-grapher-1.jpg" aboveImageSource="/images/editting/photo-grapher-2.jpg" />
+                <ImageComparisonSlider bgImageSource="/images/editting/photo-grapher-1.jpg" aboveImageSource="/images/editting/photo-grapher-2.JPG" />
             </div>
             <div>
                 <h5 className="my-6 font-semibold">TV & Fireplace Replacement </h5>
-                <ImageComparisonSlider bgImageSource="/images/editting/fire-place-1.jpg" aboveImageSource="/images/editting/fire-place-2.jpg" />
+                <ImageComparisonSlider bgImageSource="/images/editting/fire-place-1.jpg" aboveImageSource="/images/editting/fire-place-2.JPG" />
             </div>
 
         </div>

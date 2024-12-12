@@ -1,7 +1,7 @@
 "use client"
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Modal from "@/components/base/Modal";
 import BreadCrumb from "@/components/BreadCrumb";
@@ -19,28 +19,58 @@ const data: dataType[] = [
   {
     id: 2,
     image: '/images/portfolio/picture-2.jpg',
-    alt: 'picture-1'
+    alt: 'picture-2'
   },
   {
     id: 3,
     image: '/images/portfolio/picture-3.jpg',
-    alt: 'picture-1'
+    alt: 'picture-3'
   },
   {
     id: 4,
     image: '/images/portfolio/picture-4.JPG',
-    alt: 'picture-1'
+    alt: 'picture-4'
   },
   {
     id: 5,
     image: '/images/portfolio/picture-5.jpg',
-    alt: 'picture-1'
+    alt: 'picture-5'
   },
   {
     id: 6,
     image: '/images/portfolio/picture-6.JPG',
-    alt: 'picture-1'
-  }
+    alt: 'picture-6'
+  },
+  {
+    id: 7,
+    image: '/images/compare.jpg',
+    alt: 'picture-7'
+  },
+  {
+    id: 8,
+    image: '/images/compare1.jpg',
+    alt: 'picture-8'
+  },
+  {
+    id: 9,
+    image: '/images/compare2.jpg',
+    alt: 'picture-9'
+  },
+  {
+    id: 10,
+    image: '/images/compare3.jpg',
+    alt: 'picture-10'
+  },
+  {
+    id: 11,
+    image: '/images/editting/picture-1.jpg',
+    alt: 'picture-11'
+  },
+  {
+    id: 12,
+    image: '/images/editting/picture-2.jpg',
+    alt: 'picture-12'
+  },
 ]
 const Portfolio = () => {
   const [selectedImage, setSelectedImage] = useState<dataType | null>(null);
@@ -56,6 +86,22 @@ const Portfolio = () => {
     setSelectedImage(data[prevIndex]);
     setCurrentImageIndex(prevIndex);
   };
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (event.key === 'ArrowRight') {
+      handleNextImage();
+    } else if (event.key === 'ArrowLeft') {
+      handlePrevImage();
+    }
+  };
+
+  useEffect(() => {
+    if (!!selectedImage) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [currentImageIndex, selectedImage]);
   return (
     <>
       <BreadCrumb title="Typical Products" name="Portfolio" />
@@ -88,7 +134,7 @@ const Portfolio = () => {
               <h2 className="text-[16px] font-sans tracking-[.2em] font-semibold text-[#efb93f]">Real Estate Photography</h2>
             </div>
             <div className="max-w-7xl mx-auto p-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-3">
                 {data.map((item, index) => (
                   <div
                     key={index}

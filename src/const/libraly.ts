@@ -6,14 +6,19 @@ interface LibraryDataType  {
 
 export const LibraryData: LibraryDataType[] = [
     {
-        image: '/images/resource/sky-1.jpg',
+        image: '/images/resource/sky.jpg',
         title: 'Skies',
         description: 'They can be easily used for any outdoor photos'
     },
     {
-        image: '/images/resource/cross-way.jpg',
-        title: 'House Wall',
-        description: 'A beautiful wall will bring more beauty to your home'
+        image: '/images/resource/floorboard.jpg',
+        title: 'Floor Board',
+        description: 'A beautiful floor-board will bring more beauty to your home'
+    },
+    {
+        image: '/images/resource/swimming-pool.jpg',
+        title: 'Swimming Pool',
+        description: 'A stunning swimming pool can transform your home into a luxurious oasis.'
     },
     {
         image: '/images/resource/grass.jpg',

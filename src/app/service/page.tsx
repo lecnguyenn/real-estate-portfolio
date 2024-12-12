@@ -3,6 +3,7 @@ import Tabs from "@/components/base/Tabs";
 import TabItem from "@/components/base/Tabs/TabItem";
 import BreadCrumb from "@/components/BreadCrumb"
 import DayToDusk from "@/components/DayToDusk";
+import FloorPlan from "@/components/FloorPlan";
 import ItemRemoval from "@/components/ItemRemoval";
 import PanoramaStitching from "@/components/PanoramaStitching";
 import PhotoEditting from "@/components/PhotoEditting";
@@ -10,6 +11,7 @@ import PortraiRetouching from "@/components/PortraitRetouching";
 import VideoStaging from "@/components/VideoStaging";
 import VirtualStaging from "@/components/VirtualStaging";
 import { dataFloorImages } from "@/const/floor";
+import { dataPortraitImages } from "@/const/portrait"
 import { dataVirtualImages } from "@/const/virtual-editting";
 
 const Service = () => {
@@ -46,10 +48,10 @@ const Service = () => {
                 <PanoramaStitching data={dataVirtualImages} className="md:grid-cols-4" />
               </TabItem>
               <TabItem title="Portrait Retouching">
-                <PortraiRetouching />
+                <PortraiRetouching data={dataPortraitImages} />
               </TabItem>
               <TabItem title="Floor Plan">
-                <PanoramaStitching data={dataFloorImages} className="md:grid-cols-3" />
+                <FloorPlan data={dataFloorImages} />
               </TabItem>
             </Tabs>
           </div>

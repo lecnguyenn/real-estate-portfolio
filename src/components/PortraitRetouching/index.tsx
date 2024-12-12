@@ -5,12 +5,12 @@ import 'swiper/css/pagination';
 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from "next/image"
-import { EffectCoverflow, Navigation,Pagination } from "swiper/modules"
+import { EffectCoverflow, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 
-import { dataPortraitImages } from "@/const/portrait"
+import { VirtualEdittingType } from '@/const/virtual-editting';
 
-const PortraiRetouching = () => {
+const PortraiRetouching = ({ data }: { data: VirtualEdittingType[] }) => {
   return (
     <div className="w-full">
       <Swiper
@@ -35,7 +35,7 @@ const PortraiRetouching = () => {
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="w-full"
       >
-        {dataPortraitImages.map((item, key) => (
+        {data.map((item, key) => (
           <SwiperSlide
             key={key}
             className="bg-center bg-cover w-[900px]"
