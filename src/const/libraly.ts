@@ -26,7 +26,7 @@ export const LibraryData: LibraryDataType[] = [
         description: 'Lawn needs to be improved. Replacing grass can help'
     },
     {
-        image: '/images/resource/sky.jpg',
+        image: '/images/resource/sky-1.jpg',
         title: 'Virtual Sunset Skies',
         description: 'Dramatic sunset sky gives your photos a magical charm'
     },
