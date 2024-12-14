@@ -13,6 +13,7 @@ import VirtualStaging from "@/components/VirtualStaging";
 import { dataFloorImages } from "@/const/floor";
 import { dataPortraitImages } from "@/const/portrait"
 import { dataVirtualImages } from "@/const/virtual-editting";
+import Link from "next/link";
 
 const Service = () => {
   return (
@@ -23,6 +24,11 @@ const Service = () => {
             <p><b className="text-[#efb93f]">NewDay</b> is a real estate photo editing team based in Vietnam. We offer photographers a comprehensive suite of services, including Image Enhancement, day-to-dusk conversions, Twilight edits, Virtual Staging, and Floor Plans.
               Our goal is to help photographers save time and grow their businesses by providing High-Quality Photo and Video Editing Services and professional services.
             </p>
+            <span className="mb-12">You have an order and don’t have time to edit everything by yourself, we are always ready to help.
+              <Link href="/contact">
+                <p><b className="text-[#efb93f]">Place Order</b></p>
+              </Link>
+            </span>
             <span>
               Our samples are available in the Outstanding Service. We welcome your feedback and encourage you to contact us today for a free trial.
             </span>

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@next/third-parties": "^15.0.3",
     "@reach/dialog": "^0.18.0",
     "@react-spring/web": "^9.7.5",

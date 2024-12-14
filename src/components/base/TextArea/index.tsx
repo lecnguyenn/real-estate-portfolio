@@ -1,5 +1,5 @@
 
-interface TextAreaProps extends React.TextareaHTMLAttributes<HTMLElement> {
+interface TextAreaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
     label?: string;
     className?: string;
 }
