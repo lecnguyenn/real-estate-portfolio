@@ -76,7 +76,6 @@ const ContactUs = () => {
       <div className="relative container mt-16 mx-auto px-3">
         <div className="flex flex-wrap md:flex-nowrap mb-[100px] gap-6">
           <div className="w-full md:w-5/12">
-            {/* <h2 className='text-[16px] text-[#16191e] leading-5 mb-8'>You have an order and don’t have time to edit everything by yourself, we are always ready to help.</h2> */}
             <div className="mb-[50px] text-center">
               <h4 className="font-bold text-[26px] text-[#16191e]">Contact Us With Support Line</h4>
             </div>
@@ -84,15 +83,15 @@ const ContactUs = () => {
               <div className="absolute bg-white left-[35px] top-[-9px] py-0 px-5">
                 <h6 className="text-[14px] text-[#5e5e5e] font-semibold">To Know More</h6>
               </div>
-              <div className="flex gap-2 justify-end items-center">
+              <div className="flex gap-2 justify-center items-center">
+                <div className="w-[40px] h-[40px] bg-[#efb93f] rounded-[5px] flex justify-center items-center">
+                  <Image src={'/icons/email-text.svg'} width={25} height={25} alt="mail" />
+                </div>
                 <div className="font-semibold">
                   <span className="text-[#5e5e5e] text-[12px] leading-[1px] ">Email now</span>
                   <h6 className="text-[16px]">
                     <Link href={'mailto:NewDay247.photo@gmail.com'}>NewDay247.photo@gmail.com</Link>
                   </h6>
-                </div>
-                <div className="w-[40px] h-[40px] bg-[#efb93f] rounded-[5px] flex justify-center items-center">
-                  <Image src={'/icons/email-text.svg'} width={25} height={25} alt="mail" />
                 </div>
               </div>
             </div>
@@ -101,15 +100,15 @@ const ContactUs = () => {
               <div className="absolute bg-white left-[35px] top-[-9px] py-0 px-5">
                 <h6 className="text-[14px] text-[#5e5e5e] font-semibold">Address</h6>
               </div>
-              <div className="flex gap-2 justify-end items-center">
+              <div className="flex gap-2 justify-center items-center">
+                <div className="w-[40px] h-[40px] bg-[#efb93f] rounded-[5px] flex justify-center items-center">
+                  <Image src={'/icons/location.svg'} width={25} height={25} alt="mail" />
+                </div>
                 <div className="font-semibold">
                   <span className="text-[#5e5e5e] text-[12px] leading-[1px] ">Location</span>
                   <h6 className="text-[16px]">
                     <Link href={'mailto:newday247@gmail.com'}>Ha Noi, Viet Nam</Link>
                   </h6>
-                </div>
-                <div className="w-[40px] h-[40px] bg-[#efb93f] rounded-[5px] flex justify-center items-center">
-                  <Image src={'/icons/location.svg'} width={25} height={25} alt="mail" />
                 </div>
               </div>
             </div>
