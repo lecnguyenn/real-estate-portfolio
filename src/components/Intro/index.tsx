@@ -5,6 +5,8 @@ import 'swiper/css/scrollbar'
 import 'swiper/css/autoplay'
 import 'swiper/css/effect-fade'
 
+import Image from 'next/image'
+import Link from 'next/link'
 import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 const imageBannerSource = [
@@ -48,6 +50,9 @@ const Intro = () => {
 											<p className='font-normal text-lg leading-normal mb-10'>High-Quality Photo & Video Editing Services.</p>
 										</div>
 									</div>
+								</div>
+								<div className='flex justify-end cursor-pointer'>
+									<Link href=''><Image src='/icons/whatsapp.svg' alt='' width={50} height={50} /></Link>
 								</div>
 							</div>
 						</SwiperSlide>

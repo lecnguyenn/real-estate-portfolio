@@ -7,9 +7,10 @@ interface ModalProps {
   isOpen: boolean;
   onDismiss?: () => void;
   children: React.ReactNode;
+  isVideo?: boolean
 }
 
-const Modal = ({ isOpen, onDismiss, children }: ModalProps) => {
+const Modal = ({ isOpen, onDismiss, children, isVideo }: ModalProps) => {
   const [transitions] = useTransition(isOpen, () => ({
     config: { duration: 200 },
     from: { opacity: 0 },
@@ -25,7 +26,7 @@ const Modal = ({ isOpen, onDismiss, children }: ModalProps) => {
       <DialogContent
         className="shadow-lg max-w-2xl w-full p-0 relative"
       >
-        <X onClick={onDismiss} className="absolute top-4 right-4 z-50" />
+        <X onClick={onDismiss} color={isVideo ? 'white' : 'black'} className="absolute top-4 right-4 z-50" />
         {children}
       </DialogContent>
     </DialogOverlay>

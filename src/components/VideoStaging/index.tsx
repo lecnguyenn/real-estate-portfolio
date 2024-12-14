@@ -36,13 +36,16 @@ const VideoStaging = () => {
       </div>
       <Modal
         isOpen={!!selectedImage}
+        isVideo={true}
         onDismiss={() => setSelectedImage(null)}
       >
-
-        <video width={1000} height={500} controls autoPlay playsInline preload="none" >
-          <source src={selectedImage?.video} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <iframe
+          width="100%"
+          height={380}
+          src={`${selectedImage?.video}?autoplay=1`}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
       </Modal>
     </div>
   )
