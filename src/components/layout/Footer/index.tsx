@@ -49,6 +49,11 @@ const Footer = () => {
                 <Image src={'/icons/instagram.svg'} width={35} height={35} alt="sociel" />
               </a>
             </li>
+            <li>
+              <a href="https://www.instagram.com/newday.photo/">
+                <Image src={'/icons/whatsapp.svg'} width={35} height={35} alt="sociel" />
+              </a>
+            </li>
           </ul>
         </div>
       </div>

@@ -26,19 +26,19 @@ export const data: VideoDataType[] = [
   },
   {
     id: 4,
-    video: 'https://www.youtube.com/embed/zw2-q2nTPgQ&t=9s',
+    video: 'https://www.youtube.com/embed/zw2-q2nTPgQ',
     image: '/images/editting/video-4.jpg',
     alt: 'video-4'
   },
   {
     id: 5,
-    video: 'https://www.youtube.com/embed/MSURcRQIAUk&t=1s',
+    video: 'https://www.youtube.com/embed/MSURcRQIAUk',
     image: '/images/editting/video-5.jpg',
     alt: 'video-5'
   },
   {
     id: 6,
-    video: 'https://www.youtube.com/embed/C-sXQxcPl_E&t=30s',
+    video: 'https://www.youtube.com/embed/C-sXQxcPl_E',
     image: '/images/editting/video-6.jpg',
     alt: 'video-6'
   }
