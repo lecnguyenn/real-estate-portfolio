@@ -36,8 +36,9 @@ const TrustBy = () => {
     >
       <div className="container mx-auto">
         <div className="flex justify-center">
-          <div>
+          <div  className="text-center">
             <h2 className="text-[30px] lg:text-[40px] font-bold mb-[5px] leading-[1.3]">Trusted & Relied On</h2>
+                        <p>Real estate photo editing and video editing services trusted by over 35,000 professionals</p>
           </div>
         </div>
         <div className="mt-[30px]">

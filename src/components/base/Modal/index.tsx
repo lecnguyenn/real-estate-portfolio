@@ -1,6 +1,5 @@
 "use client"
-import { DialogContent, DialogOverlay } from "@reach/dialog";
-import { useTransition } from "@react-spring/web";
+import { DialogContent as ReachDialogContent, DialogOverlay as ReachDialogOverlay } from "@reach/dialog";
 import { X } from "lucide-react";
 
 interface ModalProps {
@@ -9,19 +8,16 @@ interface ModalProps {
   children: React.ReactNode;
   isVideo?: boolean
 }
+const DialogOverlay = ReachDialogOverlay as any;
+const DialogContent = ReachDialogContent as any;
 
 const Modal = ({ isOpen, onDismiss, children, isVideo }: ModalProps) => {
-  const [transitions] = useTransition(isOpen, () => ({
-    config: { duration: 200 },
-    from: { opacity: 0 },
-    enter: { opacity: 1 },
-    leave: { opacity: 0 },
-  }))
-  console.log(transitions);
+
   return (
     <DialogOverlay
       isOpen={isOpen}
       className="fixed inset-0 flex items-center justify-center bg-[rgba(0,0,0,0.74)] z-50 px-4"
+      as="div"
     >
       <DialogContent
         className="shadow-lg max-w-2xl w-full p-0 relative"

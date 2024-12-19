@@ -8,12 +8,12 @@ import 'swiper/css/effect-fade'
 import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 const imageBannerSource = [
-	'/images/banner/banner-bg.jpg',
-	'/images/banner/banner-bg2.jpg',
-	'/images/banner/banner-bg3.jpg',
-	'/images/banner/banner-bg4.jpg',
-	'/images/banner/banner-bg5.jpg',
-	'/images/banner/banner-bg6.jpg',
+	'/images/banner/banner-bg.webp',
+	'/images/banner/banner-bg2.webp',
+	'/images/banner/banner-bg3.webp',
+	'/images/banner/banner-bg4.webp',
+	'/images/banner/banner-bg5.webp',
+	'/images/banner/banner-bg6.webp',
 ]
 
 const Intro = () => {
@@ -43,9 +43,9 @@ const Intro = () => {
 									<div>
 										<div className="max-w-[625px] w-full text-white text-right">
 											<h2 className="font-bold not-italic leading-tight text-[50px] sm:text-[60px] xl:text-[75px]">
-												NewDay Valley Real Estate
+												NewDay 247
 											</h2>
-											<p className='font-normal text-lg leading-normal mb-10'>High-Quality Photo & Video Editing Services.</p>
+											<p className='font-normal text-lg leading-normal mb-10'>Highlighting the Beauty of Real Estate</p>
 										</div>
 									</div>
 								</div>

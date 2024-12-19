@@ -13,6 +13,7 @@
     "@next/third-parties": "^15.0.3",
     "@reach/dialog": "^0.18.0",
     "@react-spring/web": "^9.7.5",
+    "@tawk.to/tawk-messenger-react": "^2.0.2",
     "@types/lodash": "^4.17.13",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",

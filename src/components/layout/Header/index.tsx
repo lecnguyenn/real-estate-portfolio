@@ -115,7 +115,7 @@ const Header = () => {
                 To More Inquri
               </span>
               <h6 className="text-sm md:text-base leading-[20px] text-white hover:text-[#efb93f] transition duration-500">
-                <a href="tel:+84798327979">+84 798 327 979</a>
+                <a href="tel:+84798327979">+84 79 832 7979</a>
               </h6>
               <span className="hidden md:block absolute right-[-10px] top-1/2 h-[32px] w-[1px] bg-white/50 transform -translate-y-1/2"></span>
             </div>

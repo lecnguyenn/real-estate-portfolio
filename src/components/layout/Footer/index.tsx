@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="items-center">
             <span className="text-[14px] text-white font-semibold">To More Inquiry</span>
             <h6 className="text-[20px] font-semibold text-[#efb93f]">
-              <a href="tel:+84798327979">+84 798 327 979</a>
+              <a href="tel:+84798327979">+84 79 832 7979</a>
             </h6>
           </div>
         </div>
@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="items-center">
             <span className="text-[14px] text-white font-semibold">Connect with us</span>
             <h6 className="text-[20px] font-semibold text-[#efb93f]">
-              <a href="mailto:newday247@gmail.com">newday247@gmail.com</a>
+              <a href="mailto:newday247.photo@gmail.com">newday247.photo@gmail.com</a>
             </h6>
           </div>
         </div>

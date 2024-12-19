@@ -11,7 +11,7 @@ export const LibraryData: LibraryDataType[] = [
         description: 'They can be easily used for any outdoor photos'
     },
     {
-        image: '/images/resource/floorboard.jpg',
+        image: '/images/resource/floorboard-1.jpg',
         title: 'Floor Board',
         description: 'A beautiful floor-board will bring more beauty to your home'
     },

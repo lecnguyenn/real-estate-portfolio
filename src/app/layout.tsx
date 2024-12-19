@@ -5,6 +5,7 @@ import { Montserrat, Open_Sans } from 'next/font/google'
 
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
+import TawkChat from '@/components/TawkChat'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -24,8 +25,25 @@ const openSans = Open_Sans({
 
 
 export const metadata: Metadata = {
-  title: 'New Day',
-  description: 'Real Estate for everyone',
+  title: 'New Day | Real Estate Photo Editing Service',
+  description: 'We provide virtual staging and photo editing services to enhance your real estate listings with professional results.',
+  keywords: ['real estate photo editing', 'virtual staging', 'property photo enhancement'],
+  authors: [{ name: 'New Day Team', url: 'https://newday247.com' }],
+  creator: 'New Day 247',
+  openGraph: {
+    title: 'New Day | Real Estate Photo Editing Service',
+    description: 'Enhance your real estate photos with our professional virtual staging and photo editing services.',
+    url: 'https://newday247.com',
+    images: [
+      {
+        url: '/images/LOGO-1.svg',
+        width: 1200,
+        height: 630,
+        alt: 'New Day 247 Logo',
+      },
+    ],
+    type: 'website',
+  },
 }
 
 export default function RootLayout({
@@ -38,22 +56,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/images/logo.png" />
-        <script
-          type="text/javascript"
-          dangerouslySetInnerHTML={{
-            __html: `
-                var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-                (function(){
-                  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-                  s1.async=true;
-                  s1.src='https://embed.tawk.to/675e8993af5bfec1dbdbf931/1if4kiqpb';
-                  s1.charset='UTF-8';
-                  s1.setAttribute('crossorigin','*');
-                  s0.parentNode.insertBefore(s1,s0);
-                })();
-              `
-          }}
-        />
       </head>
       <body className={`${montserrat.variable} ${openSans.variable} antialiased`}>
         <div className='flex-grow'>
@@ -61,6 +63,7 @@ export default function RootLayout({
           {children}
         </div>
         <Footer />
+        <TawkChat />
       </body>
     </html>
   )
